@@ -5,19 +5,19 @@ export default function Footer() {
                 <div className="row">
 
                     <div className="col-md-4 pt-5">
-                        <h2 className="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
+                        <h2 className="h2 text-success border-bottom pb-3 border-light logo">Gems Shop</h2>
                         <ul className="list-unstyled text-light footer-link-list">
                             <li>
                                 <i className="fas fa-map-marker-alt fa-fw"></i>
-                                123 Consectetur at ligula 10660
+                                ul. Kiril Petkov, Sofia
                             </li>
                             <li>
                                 <i className="fa fa-phone fa-fw"></i>
-                                <a className="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                                <a className="text-decoration-none" href="tel:010-020-0340">089 020 0340</a>
                             </li>
                             <li>
                                 <i className="fa fa-envelope fa-fw"></i>
-                                <a className="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                                <a className="text-decoration-none" href="mailto:info@company.com">gemsshop@gmail.com</a>
                             </li>
                         </ul>
                     </div>
@@ -25,13 +25,13 @@ export default function Footer() {
                     <div className="col-md-4 pt-5">
                         <h2 className="h2 text-light border-bottom pb-3 border-light">Products</h2>
                         <ul className="list-unstyled text-light footer-link-list">
-                            <li><a className="text-decoration-none" href="#">Luxury</a></li>
-                            <li><a className="text-decoration-none" href="#">Sport Wear</a></li>
-                            <li><a className="text-decoration-none" href="#">Men's Shoes</a></li>
-                            <li><a className="text-decoration-none" href="#">Women's Shoes</a></li>
-                            <li><a className="text-decoration-none" href="#">Popular Dress</a></li>
-                            <li><a className="text-decoration-none" href="#">Gym Accessories</a></li>
-                            <li><a className="text-decoration-none" href="#">Sport Shoes</a></li>
+                            <li><a className="text-decoration-none" href="#">Raw Crystals</a></li>
+                            <li><a className="text-decoration-none" href="#">Tumbled Crystals</a></li>
+                            <li><a className="text-decoration-none" href="#">Precious stones</a></li>
+                            <li><a className="text-decoration-none" href="#">Monocrystals</a></li>
+                            <li><a className="text-decoration-none" href="#">Pyramid crystals</a></li>
+                            <li><a className="text-decoration-none" href="#">Sphere crystals</a></li>
+                            <li><a className="text-decoration-none" href="#">Buy in bulk</a></li>
                         </ul>
                     </div>
 
@@ -42,7 +42,7 @@ export default function Footer() {
                             <li><a className="text-decoration-none" href="#">About Us</a></li>
                             <li><a className="text-decoration-none" href="#">Shop Locations</a></li>
                             <li><a className="text-decoration-none" href="#">FAQs</a></li>
-                            <li><a className="text-decoration-none" href="#">Contact</a></li>
+                            <li><a className="text-decoration-none" href="#">Contacts</a></li>
                         </ul>
                     </div>
 
@@ -83,8 +83,7 @@ export default function Footer() {
                     <div className="row pt-2">
                         <div className="col-12">
                             <p className="text-left text-light">
-                                Copyright &copy; 2021 Company Name
-                                | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                                Copyright &copy; 2025 Gems Shop
                             </p>
                         </div>
                     </div>

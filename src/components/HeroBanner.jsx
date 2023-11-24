@@ -15,14 +15,10 @@ export default function HeroBanner() {
                             </div>
                             <div className="col-lg-6 mb-0 d-flex align-items-center">
                                 <div className="text-align-left align-self-center">
-                                    <h1 className="h1 text-success"><b>Zay</b> eCommerce</h1>
-                                    <h3 className="h2">Tiny and Perfect eCommerce Template</h3>
+                                    <h1 className="h1 text-success"><b>Gems</b> eCommerce</h1>
+                                    <h3 className="h2">The perfect gem awaits for you</h3>
                                     <p>
-                                        Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 (beta 1).
-                                        This template is 100% free provided by <a rel="sponsored" className="text-success" href="https://templatemo.com" target="_blank">TemplateMo</a> website.
-                                        Image credits go to <a rel="sponsored" className="text-success" href="https://stories.freepik.com/" target="_blank">Freepik Stories</a>,
-                                        <a rel="sponsored" className="text-success" href="https://unsplash.com/" target="_blank">Unsplash</a> and
-                                        <a rel="sponsored" className="text-success" href="https://icons8.com/" target="_blank">Icons 8</a>.
+                                        Enjoy a big collection of all types of gems with different sizes, colors and shapes.
                                     </p>
                                 </div>
                             </div>
@@ -37,11 +33,10 @@ export default function HeroBanner() {
                             </div>
                             <div className="col-lg-6 mb-0 d-flex align-items-center">
                                 <div className="text-align-left">
-                                    <h1 className="h1">Proident occaecat</h1>
-                                    <h3 className="h2">Aliquip ex ea commodo consequat</h3>
+                                    <h1 className="h1">Raw crystals</h1>
+                                    <h3 className="h2">Pick them exactly as they come from Earth</h3>
                                     <p>
-                                        You are permitted to use this Zay CSS template for your commercial websites.
-                                        You are <strong>not permitted</strong> to re-distribute the template ZIP file in any kind of template collection websites.
+                                        Our collection of handpicked raw minerals is very tempting, just pick the right one for you!
                                     </p>
                                 </div>
                             </div>
@@ -56,11 +51,10 @@ export default function HeroBanner() {
                             </div>
                             <div className="col-lg-6 mb-0 d-flex align-items-center">
                                 <div className="text-align-left">
-                                    <h1 className="h1">Repr in voluptate</h1>
-                                    <h3 className="h2">Ullamco laboris nisi ut </h3>
+                                    <h1 className="h1">Tumbled crystals</h1>
+                                    <h3 className="h2">The smooth surface of these crytals is very soothing</h3>
                                     <p>
-                                        We bring you 100% free CSS templates for your websites.
-                                        If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.
+                                        These crystals can be carried in a purse, wallet or pocket. Very convinient for taking outside. 
                                     </p>
                                 </div>
                             </div>
