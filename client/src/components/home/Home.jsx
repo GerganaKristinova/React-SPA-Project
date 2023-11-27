@@ -1,9 +1,9 @@
-import Categories from "./categories/Categories"
+import Categories from "./Categories"
 import Footer from "../footer/Footer"
 import Header from "../header/Header"
-import HeroBanner from "./hero-banner/HeroBanner"
+import HeroBanner from "./HeroBanner"
 import Navigation from "../navigation/Navigation"
-import Reviews from "./reviews/Reviews"
+import Reviews from "./Reviews"
 
 export default function Home() {
 
