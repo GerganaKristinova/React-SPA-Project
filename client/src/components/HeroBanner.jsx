@@ -11,14 +11,14 @@ export default function HeroBanner() {
                     <div className="container">
                         <div className="row p-5">
                             <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                                <img className="img-fluid" src="./assets/img/banner_img_01.jpg" alt="" />
+                                <img className="img-fluid" src="./assets/img/crystal_10.png" alt="" />
                             </div>
                             <div className="col-lg-6 mb-0 d-flex align-items-center">
                                 <div className="text-align-left align-self-center">
-                                    <h1 className="h1 text-success"><b>Gems</b> eCommerce</h1>
-                                    <h3 className="h2">The perfect gem awaits for you</h3>
+                                    <h1 className="h1 text-success"><b>Gem</b> Posts</h1>
+                                    <h3 className="h2">Upload your own crytals</h3>
                                     <p>
-                                        Enjoy a big collection of all types of gems with different sizes, colors and shapes.
+                                        Make an appreciation post for your favorite crystal and let the others rate it.
                                     </p>
                                 </div>
                             </div>
@@ -29,14 +29,14 @@ export default function HeroBanner() {
                     <div className="container">
                         <div className="row p-5">
                             <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                                <img className="img-fluid" src="./assets/img/banner_img_02.jpg" alt="" />
+                                <img className="img-fluid" src="./assets/img/crystal_4.jpg" alt="" />
                             </div>
                             <div className="col-lg-6 mb-0 d-flex align-items-center">
                                 <div className="text-align-left">
-                                    <h1 className="h1">Raw crystals</h1>
-                                    <h3 className="h2">Pick them exactly as they come from Earth</h3>
+                                    <h1 className="h1">Different Caregories</h1>
+                                    <h3 className="h2">You can choose from multiple categories</h3>
                                     <p>
-                                        Our collection of handpicked raw minerals is very tempting, just pick the right one for you!
+                                        Choose the category that best suits your unique crystal and share it with others.
                                     </p>
                                 </div>
                             </div>
@@ -47,14 +47,14 @@ export default function HeroBanner() {
                     <div className="container">
                         <div className="row p-5">
                             <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                                <img className="img-fluid" src="./assets/img/banner_img_03.jpg" alt="" />
+                                <img className="img-fluid" src="./assets/img/crystal_3.png" alt="" />
                             </div>
                             <div className="col-lg-6 mb-0 d-flex align-items-center">
                                 <div className="text-align-left">
-                                    <h1 className="h1">Tumbled crystals</h1>
-                                    <h3 className="h2">The smooth surface of these crytals is very soothing</h3>
+                                    <h1 className="h1">Reviews</h1>
+                                    <h3 className="h2">See all the reviews</h3>
                                     <p>
-                                        These crystals can be carried in a purse, wallet or pocket. Very convinient for taking outside. 
+                                        You can see all the reviews for every crystal post. 
                                     </p>
                                 </div>
                             </div>

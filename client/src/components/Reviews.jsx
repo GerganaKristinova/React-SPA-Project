@@ -6,7 +6,7 @@ export default function Reviews() {
                     <div className="col-lg-6 m-auto">
                         <h1 className="h1">Reviews</h1>
                         <p>
-                            You can check out our reviews in the section below.
+                            You can check out our crystal reviews in the section below.
                         </p>
                     </div>
                 </div>

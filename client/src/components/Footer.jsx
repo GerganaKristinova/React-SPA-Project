@@ -9,7 +9,7 @@ export default function Footer() {
                         <ul className="list-unstyled text-light footer-link-list">
                             <li>
                                 <i className="fas fa-map-marker-alt fa-fw"></i>
-                                ul. Kiril Petkov, Sofia
+                                Earth
                             </li>
                             <li>
                                 <i className="fa fa-phone fa-fw"></i>
@@ -17,32 +17,26 @@ export default function Footer() {
                             </li>
                             <li>
                                 <i className="fa fa-envelope fa-fw"></i>
-                                <a className="text-decoration-none" href="mailto:info@company.com">gemsshop@gmail.com</a>
+                                <a className="text-decoration-none" href="mailto:info@company.com">gemposts@gmail.com</a>
                             </li>
                         </ul>
                     </div>
 
                     <div className="col-md-4 pt-5">
-                        <h2 className="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                        <h2 className="h2 text-light border-bottom pb-3 border-light">Categories</h2>
                         <ul className="list-unstyled text-light footer-link-list">
-                            <li><a className="text-decoration-none" href="#">Raw Crystals</a></li>
-                            <li><a className="text-decoration-none" href="#">Tumbled Crystals</a></li>
-                            <li><a className="text-decoration-none" href="#">Precious stones</a></li>
-                            <li><a className="text-decoration-none" href="#">Monocrystals</a></li>
-                            <li><a className="text-decoration-none" href="#">Pyramid crystals</a></li>
-                            <li><a className="text-decoration-none" href="#">Sphere crystals</a></li>
-                            <li><a className="text-decoration-none" href="#">Buy in bulk</a></li>
+                            <li><a className="text-decoration-none" href="#">Raw Gems</a></li>
+                            <li><a className="text-decoration-none" href="#">Tumbled Gems</a></li>
+                            <li><a className="text-decoration-none" href="#">Shaped gems</a></li>
                         </ul>
                     </div>
 
                     <div className="col-md-4 pt-5">
                         <h2 className="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
                         <ul className="list-unstyled text-light footer-link-list">
-                            <li><a className="text-decoration-none" href="#">Home</a></li>
-                            <li><a className="text-decoration-none" href="#">About Us</a></li>
-                            <li><a className="text-decoration-none" href="#">Shop Locations</a></li>
-                            <li><a className="text-decoration-none" href="#">FAQs</a></li>
+                            <li><a className="text-decoration-none" href="#">About</a></li>
                             <li><a className="text-decoration-none" href="#">Contacts</a></li>
+                            <li><a className="text-decoration-none" href="#">FAQs</a></li>
                         </ul>
                     </div>
 

@@ -4,7 +4,7 @@ import HeroBanner from "./components/HeroBanner"
 import Modal from "./components/Modal"
 import Navigation from "./components/Navigation"
 import Reviews from "./components/Reviews"
-import TopSellers from "./components/TopSellers"
+import Categories from "./components/Categories"
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
 
       <HeroBanner />
         
-      <TopSellers />
+      <Categories />
 
       <Reviews />
 

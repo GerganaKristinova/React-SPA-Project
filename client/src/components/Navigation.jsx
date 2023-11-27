@@ -5,7 +5,7 @@ export default function Navigation() {
                 <div className="w-100 d-flex justify-content-between">
                     <div>
                         <i className="fa fa-envelope mx-2"></i>
-                        <a className="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">gemsshop@gmail.com</a>
+                        <a className="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">gemposts@gmail.com</a>
                         <i className="fa fa-phone mx-2"></i>
                         <a className="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">089 020 0340</a>
                     </div>

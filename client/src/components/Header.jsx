@@ -4,7 +4,7 @@ export default function Header() {
       <div className="container d-flex justify-content-between align-items-center">
 
         <a className="navbar-brand text-success logo h1 align-self-center" href="index.html">
-          Gems💎
+          Gems
         </a>
 
         <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,13 +18,19 @@ export default function Header() {
                 <a className="nav-link" href="index.html">Home</a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="shop.html">Crystal Posts</a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="about.html">About</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="shop.html">Shop</a>
+                <a className="nav-link" href="contact.html">Contacts</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="contact.html">Contacts</a>
+                <a className="nav-link" href="login.html">Login</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="register.html">Register</a>
               </li>
             </ul>
           </div>
