@@ -1,32 +1,21 @@
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import HeroBanner from "./components/HeroBanner"
-import Modal from "./components/Modal"
-import Navigation from "./components/Navigation"
-import Reviews from "./components/Reviews"
-import Categories from "./components/Categories"
+import { Route, Routes } from 'react-router-dom'
+
+import Home from './components/home/Home'
+import About from './components/about/About'
+import Crystals from './components/crystals/Crystals'
+import Contacts from './components/contacts/Contacts'
 
 function App() {
 
   return (
-
-    <div>
-      
-      <Navigation />
-
-      <Header />
-
-      <Modal />
-
-      <HeroBanner />
-        
-      <Categories />
-
-      <Reviews />
-
-      <Footer />
-      
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/crystals' element={<Crystals />} />
+        <Route path='/contacts' element={<Contacts />} />
+      </Routes>
+    </>
   )
 }
 

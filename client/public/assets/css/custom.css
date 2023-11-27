@@ -1,1 +1,7 @@
 /* custom css*/
+.contacts-link-list li a{
+    color: #853075;
+}
+.contacts-link-list li a:hover{
+    color: darkgray;
+}
