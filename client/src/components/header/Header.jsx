@@ -20,7 +20,7 @@ export default function Header() {
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/crystals">Crystal Posts</Link>
+                <Link className="nav-link" to="/raw-gems">Crystal Posts</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/create-post">Create Post</Link>

@@ -7,15 +7,15 @@ export default function Navigation() {
                 <div className="w-100 d-flex justify-content-between">
                     <div>
                         <i className="fa fa-envelope mx-2"></i>
-                        <Link className="navbar-sm-brand text-light text-decoration-none" to="/">gemposts@gmail.com</Link>
+                        <Link className="navbar-sm-brand text-light text-decoration-none" to="/contacts">gemposts@gmail.com</Link>
                         <i className="fa fa-phone mx-2"></i>
-                        <Link className="navbar-sm-brand text-light text-decoration-none" to="/">089 020 0340</Link>
+                        <Link className="navbar-sm-brand text-light text-decoration-none" to="/contacts">089 020 0340</Link>
                     </div>
                     <div>
-                        <Link className="text-light" to="/" target="_blank" rel="sponsored"><i className="fab fa-facebook-f fa-sm fa-fw me-2"></i></Link>
-                        <Link className="text-light" to="/" target="_blank"><i className="fab fa-instagram fa-sm fa-fw me-2"></i></Link>
-                        <Link className="text-light" to="/" target="_blank"><i className="fab fa-twitter fa-sm fa-fw me-2"></i></Link>
-                        <Link className="text-light" to="/" target="_blank"><i className="fab fa-linkedin fa-sm fa-fw"></i></Link>
+                        <Link className="text-light" to="http://facebook.com/" target="_blank" rel="sponsored"><i className="fab fa-facebook-f fa-sm fa-fw me-2"></i></Link>
+                        <Link className="text-light" to="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram fa-sm fa-fw me-2"></i></Link>
+                        <Link className="text-light" to="https://twitter.com/" target="_blank"><i className="fab fa-twitter fa-sm fa-fw me-2"></i></Link>
+                        <Link className="text-light" to="https://www.linkedin.com/" target="_blank"><i className="fab fa-linkedin fa-sm fa-fw"></i></Link>
                     </div>
                 </div>
             </div>

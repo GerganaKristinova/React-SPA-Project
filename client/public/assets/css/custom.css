@@ -17,7 +17,7 @@
 }
 
 .text-center.mb-0.heading {
-    font-size: 1.5em !important;
+    font-size: 1.2em !important;
     color: #853075;
     font-weight: 400 !important;
 }
@@ -26,6 +26,24 @@
 #zodiac {
     color: rgb(121, 121, 121);
 }
+
+.col-lg-9 h3 {
+    color: #853075;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.card-img.rounded-0.img-fluid {
+    aspect-ratio: 1/1 !important;
+    object-fit: cover !important;
+    width: 100% !important;
+}
+
+.card-body {
+    flex: 0 0 auto;
+}
+
 
 /* .card.mb-4.product-wap.rounded-0 {
     border: 2px solid #702963 !important;

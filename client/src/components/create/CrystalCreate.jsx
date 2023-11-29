@@ -8,31 +8,27 @@ export default function CrystalCreate() {
         e.preventDefault()
         const crystalData = Object.fromEntries(new FormData(e.currentTarget));
 
-        console.log(crystalData);
-        console.log(crystalData.category);
-
         try {
             switch (crystalData.category) {
                 case "rawgems":
                     await crystalService.createRawGems(crystalData)
-                    navigate('/crystals/raw-gems')
+                    navigate('/raw-gems')
                     break;
 
                 case "tumbledgems":
                     await crystalService.createTumbledGems(crystalData)
-                    navigate('/crystals/tumbled-gems')
+                    navigate('/tumbled-gems')
                     break;
 
                 case "shapedgems":
                     await crystalService.createShapedGems(crystalData)
-                    navigate('/crystals/shaped-gems')
+                    navigate('/shaped-gems')
                     break;
             }
         } catch (err) {
             console.log(err);
         }
     }
-
 
     return (
         <div className="container py-5">

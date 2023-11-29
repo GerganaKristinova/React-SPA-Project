@@ -177,7 +177,7 @@ body, ul, li, p, a, label, input, div {
  }
 
 /* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
   #templatemo_main_nav .navbar-nav {max-width: 600px;}
   #template-mo-zay-hero-carousel .carousel-item {min-height: 30rem !important;}
   .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {font-size: 18px !important;}

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
     return (
         <footer className="bg-dark" id="tempaltemo_footer">
@@ -9,15 +11,15 @@ export default function Footer() {
                         <ul className="list-unstyled text-light footer-link-list">
                             <li>
                                 <i className="fas fa-map-marker-alt fa-fw"></i>
-                                <a className="text-decoration-none" href="earth">Earth</a>
+                                <Link className="text-decoration-none" to="/contacts">Earth</Link>
                             </li>
                             <li>
                                 <i className="fa fa-phone fa-fw"></i>
-                                <a className="text-decoration-none" href="tel:010-020-0340">089 020 0340</a>
+                                <Link className="text-decoration-none" to="/contacts">089 020 0340</Link>
                             </li>
                             <li>
                                 <i className="fa fa-envelope fa-fw"></i>
-                                <a className="text-decoration-none" href="mailto:info@company.com">gemposts@gmail.com</a>
+                                <Link className="text-decoration-none" to="/contacts">gemposts@gmail.com</Link>
                             </li>
                         </ul>
                     </div>
@@ -25,18 +27,18 @@ export default function Footer() {
                     <div className="col-md-4 pt-5">
                         <h2 className="h2 text-light border-bottom pb-3 border-light">Categories</h2>
                         <ul className="list-unstyled text-light footer-link-list">
-                            <li><a className="text-decoration-none" href="#">Raw Gems</a></li>
-                            <li><a className="text-decoration-none" href="#">Tumbled Gems</a></li>
-                            <li><a className="text-decoration-none" href="#">Shaped gems</a></li>
+                            <li><Link className="text-decoration-none" to="/raw-gems">Raw Gems</Link></li>
+                            <li><Link className="text-decoration-none" to="/tumbled-gems">Tumbled Gems</Link></li>
+                            <li><Link className="text-decoration-none" to="/shaped-gems">Shaped gems</Link></li>
                         </ul>
                     </div>
 
                     <div className="col-md-4 pt-5">
                         <h2 className="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
                         <ul className="list-unstyled text-light footer-link-list">
-                            <li><a className="text-decoration-none" href="#">About</a></li>
-                            <li><a className="text-decoration-none" href="#">Contacts</a></li>
-                            <li><a className="text-decoration-none" href="#">FAQs</a></li>
+                            <li><Link className="text-decoration-none" to="/about">About</Link></li>
+                            <li><Link className="text-decoration-none" to="/contacts">Contacts</Link></li>
+                            <li><Link className="text-decoration-none" to="/contacts">FAQs</Link></li>
                         </ul>
                     </div>
 
@@ -49,16 +51,16 @@ export default function Footer() {
                     <div className="col-auto me-auto">
                         <ul className="list-inline text-left footer-icons">
                             <li className="list-inline-item border border-light rounded-circle text-center">
-                                <a className="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i className="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                                <Link className="text-light text-decoration-none" target="_blank" to="http://facebook.com/"><i className="fab fa-facebook-f fa-lg fa-fw"></i></Link>
                             </li>
                             <li className="list-inline-item border border-light rounded-circle text-center">
-                                <a className="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i className="fab fa-instagram fa-lg fa-fw"></i></a>
+                                <Link className="text-light text-decoration-none" target="_blank" to="https://www.instagram.com/"><i className="fab fa-instagram fa-lg fa-fw"></i></Link>
                             </li>
                             <li className="list-inline-item border border-light rounded-circle text-center">
-                                <a className="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i className="fab fa-twitter fa-lg fa-fw"></i></a>
+                                <Link className="text-light text-decoration-none" target="_blank" to="https://twitter.com/"><i className="fab fa-twitter fa-lg fa-fw"></i></Link>
                             </li>
                             <li className="list-inline-item border border-light rounded-circle text-center">
-                                <a className="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i className="fab fa-linkedin fa-lg fa-fw"></i></a>
+                                <Link className="text-light text-decoration-none" target="_blank" to="https://www.linkedin.com/"><i className="fab fa-linkedin fa-lg fa-fw"></i></Link>
                             </li>
                         </ul>
                     </div>

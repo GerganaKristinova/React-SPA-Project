@@ -7,9 +7,9 @@ import Navigation from './components/navigation/Navigation'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import CrystalCreate from './components/create/CrystalCreate'
-import RawGems from './components/crystals/raw-gems/RawGems'
-import ShapedGems from './components/crystals/shaped-gems/ShapedGems'
-import TumbledGems from './components/crystals/tumbled-gems/TumbledGems'
+import RawGems from './components/posts/raw-gems/RawGems'
+import ShapedGems from './components/posts/shaped-gems/ShapedGems'
+import TumbledGems from './components/posts/tumbled-gems/TumbledGems'
 
 function App() {
 
@@ -23,11 +23,10 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/contacts' element={<Contacts />} />
-        <Route path='/crystals' element={<RawGems />} />
         <Route path='/create-post' element={<CrystalCreate />} />
-        <Route path='/crystals/raw-gems' element={<RawGems />} />
-        <Route path='/crystals/tumbled-gems' element={<TumbledGems />} />
-        <Route path='/crystals/shaped-gems' element={<ShapedGems />} />
+        <Route path='/raw-gems' element={<RawGems />} />
+        <Route path='/tumbled-gems' element={<TumbledGems />} />
+        <Route path='/shaped-gems' element={<ShapedGems />} />
       </Routes>
 
       <Footer />

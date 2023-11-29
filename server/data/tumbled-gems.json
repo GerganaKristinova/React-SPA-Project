@@ -1,0 +1,36 @@
+{
+    "15bf3b8b-7abd-4f40-8765-11192fecb810": {
+        "crystal": "Obsidian",
+        "energy": "Protection",
+        "category": "tumbledgems",
+        "zodiac": "Scorpio",
+        "specifics": "Snowflake Pattern",
+        "cleansing": "Water, Moon, Sound",
+        "imageUrl": "https://i.pinimg.com/564x/fc/48/ed/fc48ede562274b44501217a7cee88ef9.jpg",
+        "summary": "Obsidian is a powerful grounding stone that's known to shield against negativity and bring clarity to the mind.",
+        "_id": "15bf3b8b-7abd-4f40-8765-11192fecb810"
+    },
+
+    "6a708424-2fa3-4d63-aa87-dda41ec20628": {
+        "crystal": "Carnelian",
+        "energy": "Confidence",
+        "category": "tumbledgems",
+        "zodiac": "Virgo",
+        "specifics": "Light Orange",
+        "cleansing": "Water, Sun, Energy Crystals",
+        "imageUrl": "https://i.pinimg.com/564x/8d/ce/21/8dce217afa60b6b91e14446516e3727f.jpg",
+        "summary": "Carnelian crystals are celebrated for their rich, vibrant energy that stimulates courage, motivation, and other positive life choices.",
+        "_id": "6a708424-2fa3-4d63-aa87-dda41ec20628"
+    },
+    "befc12e9-b34a-4cf9-a307-6da58eb7ad6f": {
+        "crystal": "Tigers eye",
+        "energy": "Protection",
+        "category": "tumbledgems",
+        "zodiac": "Gemini",
+        "specifics": "Color Shifting",
+        "cleansing": "Water, Plants, Nature",
+        "imageUrl": "https://i.pinimg.com/564x/c5/15/5d/c5155d91dbf9d196c048a2ba3e638b28.jpg",
+        "summary": "Tiger eye is a powerful stone that aids in releasing fear and anxiety, promoting mental clarity, and grounding the energies of the sun and earth.",
+        "_id": "befc12e9-b34a-4cf9-a307-6da58eb7ad6f"
+    }
+}
