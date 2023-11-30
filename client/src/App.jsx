@@ -10,6 +10,9 @@ import CrystalCreate from './components/create/CrystalCreate'
 import RawGems from './components/posts/raw-gems/RawGems'
 import ShapedGems from './components/posts/shaped-gems/ShapedGems'
 import TumbledGems from './components/posts/tumbled-gems/TumbledGems'
+import RawGemDetails from './components/gem-details/RawGemDetails'
+import ShapedGemDetails from './components/gem-details/ShapedGemDetails'
+import TumbledGemDetails from './components/gem-details/TumbledGemDetails'
 
 function App() {
 
@@ -27,6 +30,10 @@ function App() {
         <Route path='/raw-gems' element={<RawGems />} />
         <Route path='/tumbled-gems' element={<TumbledGems />} />
         <Route path='/shaped-gems' element={<ShapedGems />} />
+        <Route path='/raw-gems/:rawGemId' element={<RawGemDetails />} />
+        <Route path='/tumbled-gems/:tumbledGemId' element={<TumbledGemDetails />} />
+        <Route path='/shaped-gems/:shapedGemId' element={<ShapedGemDetails />} />
+
       </Routes>
 
       <Footer />

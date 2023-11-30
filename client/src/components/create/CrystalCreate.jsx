@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 
-import * as crystalService from '../../services/crystalService'
+import * as rawGemsService from '../../services/rawGemsService'
+import * as tumbledGemsService from '../../services/rawGemsService'
+import * as shapedGemsService from '../../services/rawGemsService'
 
 export default function CrystalCreate() {
     const navigate = useNavigate();
@@ -11,17 +13,17 @@ export default function CrystalCreate() {
         try {
             switch (crystalData.category) {
                 case "rawgems":
-                    await crystalService.createRawGems(crystalData)
+                    await rawGemsService.createRawGems(crystalData)
                     navigate('/raw-gems')
                     break;
 
                 case "tumbledgems":
-                    await crystalService.createTumbledGems(crystalData)
+                    await tumbledGemsService.createTumbledGems(crystalData)
                     navigate('/tumbled-gems')
                     break;
 
                 case "shapedgems":
-                    await crystalService.createShapedGems(crystalData)
+                    await shapedGemsService.createShapedGems(crystalData)
                     navigate('/shaped-gems')
                     break;
             }

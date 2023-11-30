@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
     return (
@@ -17,25 +17,25 @@ export default function Header() {
           <div className="flex-fill">
             <ul className="nav navbar-nav d-flex justify-content-between mx-lg-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
+                <NavLink className="nav-link" to="/">Home</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/raw-gems">Crystal Posts</Link>
+                <NavLink className="nav-link" to="/raw-gems">Crystal Posts</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/create-post">Create Post</Link>
+                <NavLink className="nav-link" to="/create-post">Create Post</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
+                <NavLink className="nav-link" to="/about">About</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contacts">Contacts</Link>
+                <NavLink className="nav-link" to="/contacts">Contacts</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/login">Login</Link>
+                <NavLink className="nav-link" to="/login">Login</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/register">Register</Link>
+                <NavLink className="nav-link" to="/register">Register</NavLink>
               </li>
             </ul>
           </div>
@@ -48,17 +48,17 @@ export default function Header() {
                   </div>
               </div>
             </div>
-            <Link className="nav-icon d-none d-lg-inline" to="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+            <NavLink className="nav-icon d-none d-lg-inline" to="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
               <i className="fa fa-fw fa-search text-dark mr-2"></i>
-            </Link>
-            <Link className="nav-icon position-relative text-decoration-none" to="#">
+            </NavLink>
+            <NavLink className="nav-icon position-relative text-decoration-none" to="#">
               <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
               <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-            </Link>
-            <Link className="nav-icon position-relative text-decoration-none" to="#">
+            </NavLink>
+            <NavLink className="nav-icon position-relative text-decoration-none" to="#">
               <i className="fa fa-fw fa-user text-dark mr-3"></i>
               <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-            </Link>
+            </NavLink>
           </div>
         </div>
 

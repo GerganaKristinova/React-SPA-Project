@@ -86,17 +86,17 @@ export default function Home() {
           <div className="col-12 col-md-4 p-5 mt-3">
             <Link to="/raw-gems"><img src="./assets/img/crystal_5.webp" className="rounded-circle img-fluid border" /></Link>
             <h5 className="text-center mt-3 mb-3">Raw Gems</h5>
-            <p className="text-center"><Link to="/raw-gems"><a className="btn btn-success">See All</a></Link></p>
+            <p className="text-center"><Link to="/raw-gems" className="btn btn-success">See All</Link></p>
           </div>
           <div className="col-12 col-md-4 p-5 mt-3">
             <Link to="/tumbled-gems"><img src="./assets/img/crystal_7.jpg" className="rounded-circle img-fluid border" /></Link>
             <h2 className="h5 text-center mt-3 mb-3">Tumbled Gems</h2>
-            <p className="text-center"><Link to="/tumbled-gems"><a className="btn btn-success">See All</a></Link></p>
+            <p className="text-center"><Link to="/tumbled-gems" className="btn btn-success">See All</Link></p>
           </div>
           <div className="col-12 col-md-4 p-5 mt-3">
             <Link to="/shaped-gems"><img src="./assets/img/crystal_6.jpg" className="rounded-circle img-fluid border" /></Link>
             <h2 className="h5 text-center mt-3 mb-3">Shaped gems</h2>
-            <p className="text-center"><Link to="/shaped-gems"><a className="btn btn-success">See All</a></Link></p>
+            <p className="text-center"><Link to="/shaped-gems" className="btn btn-success">See All</Link></p>
           </div>
         </div>
       </section>

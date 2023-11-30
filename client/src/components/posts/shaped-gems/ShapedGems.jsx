@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import * as crystalService from '../../../services/crystalService'
+import * as shapedGemsService from "../../../services/shapedGemsService"
 import Categories from "../Categories";
 import ShapedGemsListItem from "./shaped-gems-list-item/ShapedGemsListItem";
 
@@ -8,7 +8,7 @@ export default function ShapedGems() {
     const [shapedGems, setShapedGems] = useState([]);
 
     useEffect(() => {
-        crystalService.getAllShapedGems()
+        shapedGemsService.getAllShapedGems()
             .then(result => setShapedGems(result))
     }, [])
 

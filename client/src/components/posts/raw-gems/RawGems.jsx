@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import * as crystalService from '../../../services/crystalService'
+import * as rawGemsService from '../../../services/rawGemsService'
 import RawGemsListItem from "./raw-gems-list-item/RawGemsListItem";
 import Categories from "../Categories";
 
@@ -8,7 +8,7 @@ export default function RawGems() {
     const [rawGems, setRawGems] = useState([]);
 
     useEffect(() => {
-        crystalService.getAllRawGems()
+        rawGemsService.getAllRawGems()
             .then(result => setRawGems(result))
     }, [])
 

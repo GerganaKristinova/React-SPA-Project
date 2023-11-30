@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import * as crystalService from '../../../services/crystalService'
+import * as tumbledGemsService from '../../../services/tumbledGemsService'
 import Categories from "../Categories";
 import TumbledGemsListItem from "./tumbled-gems-list-item/TumbledGemsListItem";
 
@@ -8,7 +8,7 @@ export default function TumbledGems() {
     const [tumbledGems, setTumbledGems] = useState([]);
 
     useEffect(() => {
-        crystalService.getAllTumbledGems()
+        tumbledGemsService.getAllTumbledGems()
             .then(result => setTumbledGems(result))
     }, [])
 

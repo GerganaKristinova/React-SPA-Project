@@ -44,6 +44,16 @@
     flex: 0 0 auto;
 }
 
+.btn.btn-success.btn-lg.link {
+    font-weight: 400 !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.3rem !important;
+}
+
+.details {
+    color: #853075 !important;
+}
+
 
 /* .card.mb-4.product-wap.rounded-0 {
     border: 2px solid #702963 !important;

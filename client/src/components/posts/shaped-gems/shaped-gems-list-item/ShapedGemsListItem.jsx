@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ShapedGemsListItem({
     _id,
     imageUrl,
@@ -14,7 +16,7 @@ export default function ShapedGemsListItem({
                     <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                         <ul className="list-unstyled">
                             <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart"></i></a></li>
-                            <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="far fa-eye"></i></a></li>
+                            <li><Link className="btn btn-success text-white mt-2" to={`/shaped-gems/${_id}`}><i className="far fa-eye"></i></Link></li>
                         </ul>
                     </div>
                 </div>
