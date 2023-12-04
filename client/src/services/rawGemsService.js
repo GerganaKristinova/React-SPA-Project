@@ -1,21 +1,21 @@
 import * as request from "../lib/request";
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+const baseUrl = 'http://localhost:3030/jsonstore/raw-gems'
 
 export const getAllRawGems = async () => {
-    const result = await request.get(`${baseUrl}/raw-gems`)
+    const result = await request.get(`${baseUrl}`)
 
     return Object.values(result);
 };
 
 export const getOneRawGem = async (rawGemId) => {
-    const result = await request.get(`${baseUrl}/raw-gems/${rawGemId}`)
+    const result = await request.get(`${baseUrl}/${rawGemId}`)
 
     return result;
 }
 
 export const createRawGems = async (postData) => {
-    const result = await request.post(`${baseUrl}/raw-gems`, postData)
+    const result = await request.post(`${baseUrl}`, postData)
 
     return result;
 }

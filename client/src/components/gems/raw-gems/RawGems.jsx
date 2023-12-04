@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import * as rawGemsService from '../../../services/rawGemsService'
 import RawGemsListItem from "./raw-gems-list-item/RawGemsListItem";
-import Categories from "../Categories";
+import GemsNavigation from "../GemsNavigation";
 
 export default function RawGems() {
     const [rawGems, setRawGems] = useState([]);
@@ -16,7 +16,7 @@ export default function RawGems() {
         <div className="container py-5">
             <div className="row">
                 <div className="col-lg-3">
-                    <Categories />
+                    <GemsNavigation />
                 </div>
                 <div className="col-lg-9">
                     <div className="row">

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import * as tumbledGemsService from '../../../services/tumbledGemsService'
-import Categories from "../Categories";
+import GemsNavigation from "../GemsNavigation";
 import TumbledGemsListItem from "./tumbled-gems-list-item/TumbledGemsListItem";
 
 export default function TumbledGems() {
@@ -16,7 +16,7 @@ export default function TumbledGems() {
         <div className="container py-5">
             <div className="row">
                 <div className="col-lg-3">
-                    <Categories />
+                    <GemsNavigation />
                 </div>
                 <div className="col-lg-9">
                     <div className="row">

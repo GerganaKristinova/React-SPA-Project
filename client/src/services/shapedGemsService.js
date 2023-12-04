@@ -1,21 +1,21 @@
 import * as request from "../lib/request";
 
-const baseUrl = 'http://localhost:3030/jsonstore'
+const baseUrl = 'http://localhost:3030/jsonstore/shaped-gems'
 
 export const getAllShapedGems = async () => {
-    const result = await request.get(`${baseUrl}/shaped-gems`)
+    const result = await request.get(`${baseUrl}`)
 
     return Object.values(result);
 };
 
 export const getOneShapedGem = async (shapedGemId) => {
-    const result = await request.get(`${baseUrl}/shaped-gems/${shapedGemId}`)
+    const result = await request.get(`${baseUrl}/${shapedGemId}`)
 
     return result;
 }
 
 export const createShapedGems = async (postData) => {
-    const result = await request.post(`${baseUrl}/shaped-gems`, postData)
+    const result = await request.post(`${baseUrl}`, postData)
 
     return result;
 }

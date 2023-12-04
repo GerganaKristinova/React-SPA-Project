@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Categories() {
+export default function GemsNavigation() {
     return (
         <>
             <h1 className="h2 pb-4">Categories</h1>

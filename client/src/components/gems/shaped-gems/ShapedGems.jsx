@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import * as shapedGemsService from "../../../services/shapedGemsService"
-import Categories from "../Categories";
+import GemsNavigation from "../GemsNavigation";
 import ShapedGemsListItem from "./shaped-gems-list-item/ShapedGemsListItem";
 
 export default function ShapedGems() {
@@ -16,7 +16,7 @@ export default function ShapedGems() {
         <div className="container py-5">
             <div className="row">
                 <div className="col-lg-3">
-                    <Categories />
+                    <GemsNavigation />
                 </div>
                 <div className="col-lg-9">
                     <div className="row">
