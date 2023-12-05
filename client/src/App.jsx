@@ -14,6 +14,7 @@ import GemDetails from './components/gem-details/GemDetails'
 import Login from './components/login/Login'
 import { AuthProvider } from './contexts/authContext'
 import Logout from './components/logout/Logout'
+import Register from './components/register/Register'
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
         <Route path='/shaped-gems/:gemType/:gemId' element={<GemDetails />} />
         <Route path='/login' element={<Login />} />
         <Route path='/logout' element={<Logout />} />
+        <Route path='/register' element={<Register />} />
       </Routes>
 
       <Footer />

@@ -13,9 +13,9 @@ export default function Login() {
 
   const onLoginSubmit = (e) => {
     e.preventDefault()
-    const loginData = Object.fromEntries(new FormData(e.currentTarget));
+    const userData = Object.fromEntries(new FormData(e.currentTarget));
 
-    loginSubmitHandler(loginData)
+    loginSubmitHandler(userData)
   }
 
   return (
