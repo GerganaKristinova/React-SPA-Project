@@ -10,13 +10,15 @@ import CrystalCreate from './components/create/CrystalCreate'
 import RawGems from './components/gems/raw-gems/RawGems'
 import ShapedGems from './components/gems/shaped-gems/ShapedGems'
 import TumbledGems from './components/gems/tumbled-gems/TumbledGems'
-import RawGemDetails from './components/gem-details/RawGemDetails'
-import ShapedGemDetails from './components/gem-details/ShapedGemDetails'
-import TumbledGemDetails from './components/gem-details/TumbledGemDetails'
+import GemDetails from './components/gem-details/GemDetails'
+import Login from './components/login/Login'
+import { AuthProvider } from './contexts/authContext'
+import Logout from './components/logout/Logout'
 
 function App() {
 
   return (
+    <AuthProvider>
     <>
       <Navigation />
 
@@ -30,14 +32,16 @@ function App() {
         <Route path='/raw-gems' element={<RawGems />} />
         <Route path='/tumbled-gems' element={<TumbledGems />} />
         <Route path='/shaped-gems' element={<ShapedGems />} />
-        <Route path='/raw-gems/:rawGemId' element={<RawGemDetails />} />
-        <Route path='/tumbled-gems/:tumbledGemId' element={<TumbledGemDetails />} />
-        <Route path='/shaped-gems/:shapedGemId' element={<ShapedGemDetails />} />
-
+        <Route path='/raw-gems/:gemType/:gemId' element={<GemDetails />} />
+        <Route path='/tumbled-gems/:gemType/:gemId' element={<GemDetails />} />
+        <Route path='/shaped-gems/:gemType/:gemId' element={<GemDetails />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/logout' element={<Logout />} />
       </Routes>
 
       <Footer />
     </>
+    </AuthProvider>
   )
 }
 

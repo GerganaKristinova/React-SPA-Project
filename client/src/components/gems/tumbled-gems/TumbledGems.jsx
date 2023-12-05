@@ -21,8 +21,8 @@ export default function TumbledGems() {
                 <div className="col-lg-9">
                     <div className="row">
                         <h3>Tumbled Gems</h3>
-                        {tumbledGems.map(tumbledGem => (
-                            <TumbledGemsListItem key={tumbledGem._id} {...tumbledGem} />
+                        {tumbledGems.map(gem => (
+                            <TumbledGemsListItem key={gem._id} {...gem} />
                         ))}
 
                         {tumbledGems.length === 0 && (

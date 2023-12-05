@@ -1,6 +1,6 @@
 import * as request from "../lib/request";
 
-const baseUrl = 'http://localhost:3030/jsonstore/shaped-gems'
+const baseUrl = 'http://localhost:3030/data/shaped-gems'
 
 export const getAllShapedGems = async () => {
     const result = await request.get(`${baseUrl}`)

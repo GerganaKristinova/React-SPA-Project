@@ -1,6 +1,6 @@
 import * as request from "../lib/request";
 
-const baseUrl = 'http://localhost:3030/jsonstore/tumbled-gems'
+const baseUrl = 'http://localhost:3030/data/tumbled-gems'
 
 export const getAllTumbledGems = async () => {
     const result = await request.get(`${baseUrl}`)

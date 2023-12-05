@@ -21,8 +21,8 @@ export default function ShapedGems() {
                 <div className="col-lg-9">
                     <div className="row">
                     <h3>Shaped Gems</h3>
-                        {shapedGems.map(shapedGem => (
-                            <ShapedGemsListItem key={shapedGem._id} {...shapedGem} />
+                        {shapedGems.map(gem => (
+                            <ShapedGemsListItem key={gem._id} {...gem} />
                         ))}
 
                         {shapedGems.length === 0 && (

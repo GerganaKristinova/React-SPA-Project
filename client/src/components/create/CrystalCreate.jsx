@@ -1,31 +1,34 @@
 import { useNavigate } from 'react-router-dom'
 
 import * as rawGemsService from '../../services/rawGemsService'
-import * as tumbledGemsService from '../../services/rawGemsService'
-import * as shapedGemsService from '../../services/rawGemsService'
+import * as tumbledGemsService from '../../services/tumbledGemsService'
+import * as shapedGemsService from '../../services/shapedGemsService'
 
 export default function CrystalCreate() {
     const navigate = useNavigate();
+    
     const createCrystalSubmitHandler = async (e) => {
         e.preventDefault()
         const crystalData = Object.fromEntries(new FormData(e.currentTarget));
 
         try {
+            console.log(crystalData);
             switch (crystalData.category) {
-                case "rawgems":
+                case "raw-gem":
                     await rawGemsService.createRawGems(crystalData)
                     navigate('/raw-gems')
                     break;
-
-                case "tumbledgems":
+                case "tumbled-gem":
                     await tumbledGemsService.createTumbledGems(crystalData)
                     navigate('/tumbled-gems')
                     break;
-
-                case "shapedgems":
+                case "shaped-gem":
                     await shapedGemsService.createShapedGems(crystalData)
                     navigate('/shaped-gems')
                     break;
+                default:
+                    navigate('/404')
+                break;
             }
         } catch (err) {
             console.log(err);
@@ -50,9 +53,9 @@ export default function CrystalCreate() {
                         <label htmlFor="category">Category</label>
                         <select className="form-control mt-1" id="category" name="category" placeholder="Category">
                             <option value="choosecategory">Choose a category</option>
-                            <option value="rawgems">Raw Gems</option>
-                            <option value="tumbledgems">Tumbled Gems</option>
-                            <option value="shapedgems">Shaped Gems</option>
+                            <option value="raw-gem">Raw Gems</option>
+                            <option value="tumbled-gem">Tumbled Gems</option>
+                            <option value="shaped-gem">Shaped Gems</option>
                         </select>
                     </div>
                     <div className="mb-3">
@@ -82,7 +85,7 @@ export default function CrystalCreate() {
                         <input type="text" className="form-control mt-1" id="cleansing" name="cleansing" placeholder="Cleansing" />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="crystalImg">Image</label>
+                        <label htmlFor="imageUrl">Image</label>
                         <input type="text" className="form-control mt-1" id="imageUrl" name="imageUrl" placeholder="Upload an image" />
                     </div>
                     <div className="mb-3">

@@ -1339,6 +1339,117 @@
     	}
     };
     var seedData = {
+        'raw-gems': {
+            "caef0ea5-94f5-42e1-86df-0f6f9a564790": {
+                crystal: "Rose Quartz",
+                energy: "Love",
+                category: "raw-gem",
+                zodiac: "Libra",
+                specifics: "Light pink",
+                cleansing: "Smudging, Moon, Energy Crystals",
+                imageUrl: "https://i.etsystatic.com/17828597/r/il/a67e79/5455884964/il_1080xN.5455884964_7qco.jpg",
+                summary: "Rose quartz, often referred to as the Heart Stone symbolizes unconditional love and infinite peace, fostering deep inner healing and self-love.",
+                id: "caef0ea5-94f5-42e1-86df-0f6f9a564790"
+            },
+            "aaf9c332-6d5c-4127-9e42-38a0c6adc1f5": {
+                crystal: "Aventurine",
+                energy: "Luck",
+                category: "raw-gem",
+                zodiac: "Cancer",
+                specifics: "Sparkly green",
+                cleansing: "Water, Plants, Nature",
+                imageUrl: "https://the-crystal-council.sfo2.digitaloceanspaces.com/prod/396/conversions/Green-Aventurine-header.webp",
+                summary: "Aventurine is known as the Stone of Opportunity believed to be the luckiest of all crystals, especially in manifesting prosperity and wealth.",
+                id: "aaf9c332-6d5c-4127-9e42-38a0c6adc1f5"
+            },
+            "168ed65a-46ea-4515-96b6-91dabd9c4bb9": {
+                crystal: "Amethyst",
+                energy: "Peace",
+                category: "raw-gem",
+                zodiac: "Aquarius",
+                specifics: "Transparent purple",
+                cleansing: "Sound, Smudging, Moon",
+                imageUrl: "https://michalandcompany.com/wp-content/uploads/2021/11/Amethyst-Healing-Benefits.jpg",
+                summary: "The meaning of Amethyst is spiritual healing, calmness, and wisdom. Known as the All Purpose Stone, Amethyst is a protective stone that helps to relieve stress and anxiety in your life.",
+                id: "168ed65a-46ea-4515-96b6-91dabd9c4bb9"
+            }
+        },
+
+        'tumbled-gems': {
+            "15bf3b8b-7abd-4f40-8765-11192fecb810": {
+                crystal: "Obsidian",
+                energy: "Protection",
+                category: "tumbled-gem",
+                zodiac: "Scorpio",
+                specifics: "Snowflake Pattern",
+                cleansing: "Water, Moon, Sound",
+                imageUrl: "https://i.pinimg.com/564x/fc/48/ed/fc48ede562274b44501217a7cee88ef9.jpg",
+                summary: "Obsidian is a powerful grounding stone that's known to shield against negativity and bring clarity to the mind.",
+                _id: "15bf3b8b-7abd-4f40-8765-11192fecb810"
+            },
+        
+            "6a708424-2fa3-4d63-aa87-dda41ec20628": {
+                crystal: "Carnelian",
+                energy: "Confidence",
+                category: "tumbled-gem",
+                zodiac: "Virgo",
+                specifics: "Light Orange",
+                cleansing: "Water, Sun, Energy Crystals",
+                imageUrl: "https://i.pinimg.com/564x/8d/ce/21/8dce217afa60b6b91e14446516e3727f.jpg",
+                summary: "Carnelian crystals are celebrated for their rich, vibrant energy that stimulates courage, motivation, and other positive life choices.",
+                _id: "6a708424-2fa3-4d63-aa87-dda41ec20628"
+            },
+            "befc12e9-b34a-4cf9-a307-6da58eb7ad6f": {
+                crystal: "Tigers eye",
+                energy: "Protection",
+                category: "tumbled-gem",
+                zodiac: "Gemini",
+                specifics: "Color Shifting",
+                cleansing: "Water, Plants, Nature",
+                imageUrl: "https://i.pinimg.com/564x/c5/15/5d/c5155d91dbf9d196c048a2ba3e638b28.jpg",
+                summary: "Tiger eye is a powerful stone that aids in releasing fear and anxiety, promoting mental clarity, and grounding the energies of the sun and earth.",
+                _id: "befc12e9-b34a-4cf9-a307-6da58eb7ad6f"
+            }
+        },
+
+        'shaped-gems': {
+                "7b416154-461b-4905-a7df-c035f6506cd0": {
+                    crystal: "Labradorite",
+                    energy: "Confidence",
+                    category: "shaped-gem",
+                    zodiac: "Libra",
+                    specifics: "Sphere Shaped",
+                    cleansing: "Water, Moon",
+                    imageUrl: "https://i.etsystatic.com/23207763/r/il/29f1e9/3701649902/il_fullxfull.3701649902_fagx.jpg",
+                    summary: "Labradorite is revered for its mystical properties, often associated with self-discovery, intuition, and the awakening of one's inner spirit.",
+                    _id: "7b416154-461b-4905-a7df-c035f6506cd0"
+                },
+            
+                "91781d9d-0899-49a3-848c-6f1a0ff83948": {
+                    crystal: "Jasper",
+                    energy: "Protection",
+                    category: "shaped-gem",
+                    zodiac: "Aries",
+                    specifics: "Red Turtle",
+                    cleansing: "Smudging, Water, Moon",
+                    imageUrl: "https://i.ebayimg.com/images/g/qmkAAOSwejljeItc/s-l1200.jpg",
+                    summary: "Red Jasper, often called the Stone of Endurance, is a gentle but vital stimulator of chi or life force, bringing physical strength and energy, stamina, focus, and determination.",
+                    _id: "91781d9d-0899-49a3-848c-6f1a0ff83948"
+                },
+            
+                "92432f34-0a1b-4b15-b86e-f3f8a9d3242b": {
+                    crystal: "Agate",
+                    energy: "Luck",
+                    category: "shaped-gem",
+                    zodiac: "Virgo",
+                    specifics: "Moss Tower",
+                    cleansing: "Smudging, Water, Nature",
+                    imageUrl: "https://i0.wp.com/crystalgiftsuk.co.uk/wp-content/uploads/2021/08/20210804_151759-scaled-e1628104555933.jpg?fit=1920%2C2137&ssl=1",
+                    summary: "Moss Agate, often referred to as the Stone of Mother Gaia, is celebrated as a lucky amulet, with its green hues evoking feelings of being close to nature and its ability to uplift and soothe.",
+                    _id: "92432f34-0a1b-4b15-b86e-f3f8a9d3242b"
+                }
+        },
+
     	recipes: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
