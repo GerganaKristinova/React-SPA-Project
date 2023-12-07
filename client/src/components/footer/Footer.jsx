@@ -27,9 +27,10 @@ export default function Footer() {
                     <div className="col-md-4 pt-5">
                         <h2 className="h2 text-light border-bottom pb-3 border-light">Categories</h2>
                         <ul className="list-unstyled text-light footer-link-list">
-                            <li><Link className="text-decoration-none" to="/raw-gems">Raw Gems</Link></li>
-                            <li><Link className="text-decoration-none" to="/tumbled-gems">Tumbled Gems</Link></li>
-                            <li><Link className="text-decoration-none" to="/shaped-gems">Shaped gems</Link></li>
+                            <li><Link className="text-decoration-none" to="/gems">All Gems</Link></li>
+                            <li><Link className="text-decoration-none" to="/gems/raw-gems">Raw Gems</Link></li>
+                            <li><Link className="text-decoration-none" to="/gems/tumbled-gems">Tumbled Gems</Link></li>
+                            <li><Link className="text-decoration-none" to="/gems/shaped-gems">Shaped gems</Link></li>
                         </ul>
                     </div>
 

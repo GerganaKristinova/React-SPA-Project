@@ -15,7 +15,7 @@ export default function Home() {
             <div className="container">
               <div className="row p-5">
                 <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                  <img className="img-fluid" src="./assets/img/crystal_10.png" alt="" />
+                  <img style={{width: '70%'}} className="img-fluid" src="./assets/img/crystal_3.webp" alt="" />
                 </div>
                 <div className="col-lg-6 mb-0 d-flex align-items-center">
                   <div className="text-align-left align-self-center">
@@ -51,14 +51,14 @@ export default function Home() {
             <div className="container">
               <div className="row p-5">
                 <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                  <img className="img-fluid" src="./assets/img/crystal_3.png" alt="" />
+                  <img style={{width: '70%'}} className="img-fluid card-img" src="./assets/img/crystal_4.png" alt="" />
                 </div>
                 <div className="col-lg-6 mb-0 d-flex align-items-center">
                   <div className="text-align-left">
-                    <h1 className="h1">Reviews</h1>
-                    <h3 className="h2">See all the reviews</h3>
+                    <h1 className="h1">Favorites</h1>
+                    <h3 className="h2">Add crystals to favorites</h3>
                     <p>
-                      You can see all the reviews for every crystal post.
+                      You can add all your favorite crystal posts in one place and check them quickly when needed.
                     </p>
                   </div>
                 </div>
@@ -77,26 +77,23 @@ export default function Home() {
         <div className="row text-center pt-3">
           <div className="col-lg-6 m-auto">
             <h1 className="h1">Categories</h1>
-            <p>
-              Enjoy all crystals with different shapes, sizes and colors.
-            </p>
           </div>
         </div>
         <div className="row">
           <div className="col-12 col-md-4 p-5 mt-3">
             <Link to="/raw-gems"><img src="./assets/img/crystal_5.webp" className="rounded-circle img-fluid border" /></Link>
             <h5 className="text-center mt-3 mb-3">Raw Gems</h5>
-            <p className="text-center"><Link to="/raw-gems" className="btn btn-success">See All</Link></p>
+            <p className="text-center"><Link to="/gems/raw-gems" className="btn btn-success">See All</Link></p>
           </div>
           <div className="col-12 col-md-4 p-5 mt-3">
             <Link to="/tumbled-gems"><img src="./assets/img/crystal_7.jpg" className="rounded-circle img-fluid border" /></Link>
             <h2 className="h5 text-center mt-3 mb-3">Tumbled Gems</h2>
-            <p className="text-center"><Link to="/tumbled-gems" className="btn btn-success">See All</Link></p>
+            <p className="text-center"><Link to="/gems/tumbled-gems" className="btn btn-success">See All</Link></p>
           </div>
           <div className="col-12 col-md-4 p-5 mt-3">
             <Link to="/shaped-gems"><img src="./assets/img/crystal_6.jpg" className="rounded-circle img-fluid border" /></Link>
             <h2 className="h5 text-center mt-3 mb-3">Shaped gems</h2>
-            <p className="text-center"><Link to="/shaped-gems" className="btn btn-success">See All</Link></p>
+            <p className="text-center"><Link to="/gems/shaped-gems" className="btn btn-success">See All</Link></p>
           </div>
         </div>
       </section>

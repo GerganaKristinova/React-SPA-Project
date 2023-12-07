@@ -11,6 +11,7 @@ export default function Register() {
         password: '',
         'confirm-password': '',
         imageUrl: '',
+        description: '',
     })
 
     const onChange = (e) => {
@@ -89,8 +90,18 @@ export default function Register() {
                                 value={registerInfo.imageUrl}
                             />
                         </div>
-
-
+                        <div className="mb-3">
+                            <label htmlFor="description">Description</label>
+                            <textarea
+                                className="form-control mt-1"
+                                id="description"
+                                name="description"
+                                placeholder="Description"
+                                rows="4"
+                                onChange={onChange}
+                                value={registerInfo.description}
+                            />
+                        </div>
                     </div>
                     <div className="row">
                         <div className="col text-start mt-2">

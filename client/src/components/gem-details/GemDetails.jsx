@@ -1,36 +1,43 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-import * as rawGemsService from '../../services/rawGemsService'
-import * as tumbledGemsService from '../../services/tumbledGemsService'
-import * as shapedGemsService from '../../services/shapedGemsService'
+import * as gemsService from '../../services/gemsService'
+import AuthContext from "../../contexts/authContext";
 
 export default function GemDetails() {
-    const navigate = useNavigate();
-    const [gemDetails, setGemDetails] = useState({});
+    const navigate = useNavigate()
+    const { isAuthenticated, userId } = useContext(AuthContext)
+    const [gem, setGem] = useState({});
     const { gemType, gemId } = useParams()
 
     useEffect(() => {
+        gemsService.getOneGem(gemId)
+            .then(result => setGem(result));
 
-        switch (gemType) {
-            case 'raw-gem':
-                rawGemsService.getOneRawGem(gemId)
-            .then(setGemDetails);
-            break;
-            case 'tumbled-gem':
-                tumbledGemsService.getOneTumbledGem(gemId)
-            .then(setGemDetails);
-            break;
-            case 'shaped-gem':
-                shapedGemsService.getOneShapedGem(gemId)
-            .then(setGemDetails);
-            break;
-            default:
-                navigate('/404')
-            break;
-        }
-        
     }, [gemType, gemId]);
+
+    const deleteButtonClickHandler = async () => {
+        const hasConfirmed = confirm(`Are you sure you want to delete ${gem.crystal}`);
+
+        if (hasConfirmed) {
+            await gemsService.deleteGem(gemId);
+
+            switch (gem.category) {
+                case "raw-gems":
+                    navigate('/gems/raw-gems')
+                    break;
+                case "tumbled-gems":
+                    navigate('/gems/tumbled-gems')
+                    break;
+                case "shaped-gems":
+                    navigate('/gems/shaped-gems')
+                    break;
+                default:
+                    navigate('/404')
+                    break;
+            }
+        }
+    }
 
     return (
         <section className="bg-light">
@@ -38,13 +45,13 @@ export default function GemDetails() {
                 <div className="row">
                     <div className="col-lg-5 mt-5">
                         <div className="card mb-3">
-                            <img className="card-img img-fluid" src={gemDetails.imageUrl} alt={gemDetails.crystal} id="product-detail" />
+                            <img style={{ aspectRatio: "1/1", overflow: 'hidden', objectFit: 'cover' }} className="card-img img-fluid" src={gem.imageUrl} alt={gem.crystal} id="product-detail" />
                         </div>
                     </div>
                     <div className="col-lg-7 mt-5">
                         <div className="card">
                             <div className="card-body">
-                                <h1 className="h2">{gemDetails.crystal}</h1>
+                                <h1 className="h2">{gem.crystal}</h1>
                                 <br />
                                 {/* Rating system 
                                 <p className="py-2">
@@ -60,15 +67,24 @@ export default function GemDetails() {
                                         <h6>Energy:</h6>
                                     </li>
                                     <li className="list-inline-item">
-                                        <p className="details"><strong>{gemDetails.energy}</strong></p>
+                                        <p className="details"><strong>{gem.energy}</strong></p>
                                     </li>
                                 </ul>
+                                <ul className="list-inline">
+                                    <li className="list-inline-item">
+                                        <h6>Zodiac sign:</h6>
+                                    </li>
+                                    <li className="list-inline-item">
+                                        <p className="details"><strong>{gem.zodiac}</strong></p>
+                                    </li>
+                                </ul>
+                                
                                 <ul className="list-inline">
                                     <li className="list-inline-item">
                                         <h6>Specifics:</h6>
                                     </li>
                                     <li className="list-inline-item">
-                                        <p className="details"><strong>{gemDetails.specifics}</strong></p>
+                                        <p className="details"><strong>{gem.specifics}</strong></p>
                                     </li>
                                 </ul>
 
@@ -77,22 +93,34 @@ export default function GemDetails() {
                                         <h6>Cleansing:</h6>
                                     </li>
                                     <li className="list-inline-item">
-                                        <p className="details"><strong>{gemDetails.cleansing}</strong></p>
+                                        <p className="details"><strong>{gem.cleansing}</strong></p>
                                     </li>
                                 </ul>
 
                                 <h6>Summary:</h6>
-                                <p className="details">{gemDetails.summary}</p>
+                                <p className="details">{gem.summary}</p>
 
-                                    <input type="hidden" name="product-title" value="Activewear" />
-                                    <div className="row pb-3">
+                                <input type="hidden" name="product-title" value="Activewear" />
+                                <div className="row pb-3">
+                                    {isAuthenticated && userId !== gem._ownerId && (
                                         <div className="col d-grid">
                                             <button type="submit" className="btn btn-success btn-lg" name="submit" value="buy">Add to Favorites ♥</button>
                                         </div>
+                                    )}
+                                    <div className="col d-grid">
+                                        <Link className="btn btn-success btn-lg link" to={`/gems/${gemType}`}>Back ↩</Link>
+                                    </div>
+                                </div>
+                                {userId === gem._ownerId && (
+                                    <div className="row pb-3">
                                         <div className="col d-grid">
-                                            <Link className="btn btn-success btn-lg link" to="/raw-gems">Back ↩</Link>
+                                            <Link className="btn btn-success btn-lg link" to={`/gems/${gemType}/edit/${gemId}`}>Edit</Link>
+                                        </div>
+                                        <div className="col d-grid">
+                                            <Link className="btn btn-success btn-lg link" onClick={deleteButtonClickHandler}>Delete</Link>
                                         </div>
                                     </div>
+                                )}
 
                             </div>
                         </div>

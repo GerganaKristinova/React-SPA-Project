@@ -1,44 +1,37 @@
 import { useNavigate } from 'react-router-dom'
 
-import * as rawGemsService from '../../services/rawGemsService'
-import * as tumbledGemsService from '../../services/tumbledGemsService'
-import * as shapedGemsService from '../../services/shapedGemsService'
+import * as gemsService from '../../services/gemsService'
 
-export default function CrystalCreate() {
+
+export default function GemCreate() {
     const navigate = useNavigate();
-    
-    const createCrystalSubmitHandler = async (e) => {
-        e.preventDefault()
-        const crystalData = Object.fromEntries(new FormData(e.currentTarget));
 
-        try {
-            console.log(crystalData);
-            switch (crystalData.category) {
-                case "raw-gem":
-                    await rawGemsService.createRawGems(crystalData)
-                    navigate('/raw-gems')
-                    break;
-                case "tumbled-gem":
-                    await tumbledGemsService.createTumbledGems(crystalData)
-                    navigate('/tumbled-gems')
-                    break;
-                case "shaped-gem":
-                    await shapedGemsService.createShapedGems(crystalData)
-                    navigate('/shaped-gems')
-                    break;
-                default:
-                    navigate('/404')
+    const createGemSubmitHandler = async (e) => {
+        e.preventDefault()
+        const gemData = Object.fromEntries(new FormData(e.currentTarget));
+
+        await gemsService.createGems(gemData)
+
+        switch (gemData.category) {
+            case "raw-gems":
+                navigate('/gems/raw-gems')
                 break;
-            }
-        } catch (err) {
-            console.log(err);
+            case "tumbled-gems":
+                navigate('/gems/tumbled-gems')
+                break;
+            case "shaped-gems":
+                navigate('/gems/shaped-gems')
+                break;
+            default:
+                navigate('/404')
+                break;
         }
     }
 
     return (
         <div className="container py-5">
             <div className="row py-5">
-                <form className="col-md-9 m-auto" onSubmit={createCrystalSubmitHandler}>
+                <form className="col-md-9 m-auto" onSubmit={createGemSubmitHandler}>
                     <div className="row">
                         <div className="form-group col-md-6 mb-3">
                             <label htmlFor="crystal">Crystal</label>
@@ -53,9 +46,9 @@ export default function CrystalCreate() {
                         <label htmlFor="category">Category</label>
                         <select className="form-control mt-1" id="category" name="category" placeholder="Category">
                             <option value="choosecategory">Choose a category</option>
-                            <option value="raw-gem">Raw Gems</option>
-                            <option value="tumbled-gem">Tumbled Gems</option>
-                            <option value="shaped-gem">Shaped Gems</option>
+                            <option value="raw-gems">Raw Gems</option>
+                            <option value="tumbled-gems">Tumbled Gems</option>
+                            <option value="shaped-gems">Shaped Gems</option>
                         </select>
                     </div>
                     <div className="mb-3">
@@ -94,7 +87,7 @@ export default function CrystalCreate() {
                     </div>
                     <div className="row">
                         <div className="col text-end mt-2">
-                            <button type="submit" className="btn btn-success btn-lg px-3">Post Crystal</button>
+                            <button type="submit" className="btn btn-success btn-lg px-3">Post Gem</button>
                         </div>
                     </div>
                 </form>

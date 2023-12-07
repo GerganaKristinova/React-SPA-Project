@@ -14,7 +14,7 @@ export default function About() {
                             </p>
                         </div>
                         <div className="col-md-4">
-                            <img src="assets/img/person_1.webp" alt="About Hero" />
+                            <img className="img-fluid" src="assets/img/person_1.webp" alt="About Hero" />
                         </div>
                     </div>
                 </div>

@@ -6,43 +6,47 @@ import Contacts from './components/contacts/Contacts'
 import Navigation from './components/navigation/Navigation'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
-import CrystalCreate from './components/create/CrystalCreate'
-import RawGems from './components/gems/raw-gems/RawGems'
-import ShapedGems from './components/gems/shaped-gems/ShapedGems'
-import TumbledGems from './components/gems/tumbled-gems/TumbledGems'
+import GemCreate from './components/gem-create/GemCreate'
+import Gems from './components/gems/Gems'
 import GemDetails from './components/gem-details/GemDetails'
 import Login from './components/login/Login'
-import { AuthProvider } from './contexts/authContext'
 import Logout from './components/logout/Logout'
 import Register from './components/register/Register'
+import { AuthProvider } from './contexts/authContext'
+import GemsNavigation from './components/gems/gems-navigation/GemsNavigation'
+import GemEdit from './components/gem-edit/GemEdit'
+import PageNotFound from './components/page-not-found/PageNotFound'
 
 function App() {
 
   return (
     <AuthProvider>
-    <>
-      <Navigation />
+      <>
+        <Navigation />
 
-      <Header />
+        <Header />
 
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contacts' element={<Contacts />} />
-        <Route path='/create-post' element={<CrystalCreate />} />
-        <Route path='/raw-gems' element={<RawGems />} />
-        <Route path='/tumbled-gems' element={<TumbledGems />} />
-        <Route path='/shaped-gems' element={<ShapedGems />} />
-        <Route path='/raw-gems/:gemType/:gemId' element={<GemDetails />} />
-        <Route path='/tumbled-gems/:gemType/:gemId' element={<GemDetails />} />
-        <Route path='/shaped-gems/:gemType/:gemId' element={<GemDetails />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/logout' element={<Logout />} />
-        <Route path='/register' element={<Register />} />
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contacts' element={<Contacts />} />
+          <Route path='/create-post' element={<GemCreate />} />
+          <Route path='/gems' element={<GemsNavigation />}>
+            <Route index element={<Gems />} />
+            <Route path='raw-gems' element={<Gems />} />
+            <Route path='tumbled-gems' element={<Gems />} />
+            <Route path='shaped-gems' element={<Gems />} />
+            <Route path=':gemType/:gemId' element={<GemDetails />} />
+          </Route>
+          <Route path='/login' element={<Login />} />
+          <Route path='/logout' element={<Logout />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/gems/:gemType/edit/:gemId' element={<GemEdit />}/>
+          <Route path='*' element={<PageNotFound />} />
+        </Routes>
 
-      <Footer />
-    </>
+        <Footer />
+      </>
     </AuthProvider>
   )
 }
