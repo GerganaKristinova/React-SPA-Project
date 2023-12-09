@@ -6,7 +6,7 @@ import AuthContext from "../../contexts/authContext";
 
 export default function GemDetails() {
     const navigate = useNavigate()
-    const { userId } = useContext(AuthContext)
+    const { userId, isAuthenticated } = useContext(AuthContext)
     const [gem, setGem] = useState({});
     const { gemType, gemId } = useParams();
 
@@ -90,7 +90,7 @@ export default function GemDetails() {
                                         <Link className="btn btn-success btn-lg link" to={`/gems/${gemType}`}>Back ↩</Link>
                                     </div>
                                 </div>
-                                {userId === gem._ownerId && (
+                                {isAuthenticated && userId === gem._ownerId && (
                                     <div className="row pb-3">
                                         <div className="col d-grid">
                                             <Link className="btn btn-success btn-lg link" to={`/gems/${gemType}/edit/${gemId}`}>Edit</Link>
