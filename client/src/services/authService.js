@@ -21,14 +21,8 @@ export const register = (email, password, username, imageUrl, description) => re
 
 export const logout = () => request.get(`${baseUrl}/logout`);
 
-export const getOneProfile = (userId) => {
-    const result = request.get(`${baseUrl}/${userId}`)
+export const getOneProfile = () => {
+    const result = request.get(`${baseUrl}/me`)
 
-    return result
-}
-
-export const profileEdit = async (profileId, profileData) => {
-    const result = await request.put(`${baseUrl}/${profileId}`, profileData)
-    
     return result
 }

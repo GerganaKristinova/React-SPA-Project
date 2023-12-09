@@ -6,12 +6,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import AuthContext from "../../contexts/authContext";
-
 import Profile from "../profile/Profile";
+
 
 export default function Header() {
   const {
     isAuthenticated,
+    userId,
   } = useContext(AuthContext)
 
   const [showProfile, setShowProfile] = useState(false);
@@ -64,15 +65,6 @@ export default function Header() {
               )}
             </ul>
           </div>
-          {/* Search */}
-          {/* <div className="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-              <div className="input-group">
-              <input type="text" className="form-control" id="inputMobileSearch" placeholder="Search ..." />
-              <div className="input-group-text">
-              <i className="fa fa-fw fa-search"></i>
-              </div>
-              </div>
-            </div> */}
           <div className="navbar align-self-center d-flex">
 
             {/* Logged in */}
@@ -80,20 +72,23 @@ export default function Header() {
               <>
                 <li className="nav-link">
                   <Dropdown className="d-inline mx-2">
+
                     <Dropdown.Toggle id="dropdown-autoclose-true" style={{ border: '0px', backgroundColor: 'white', color: '#853075', fontSize: '1em' }}>
                       Profile Settings
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                      <Dropdown.Item href="/profile/edit">My Favorites</Dropdown.Item>
                       <Dropdown.Item href="/logout">Logout</Dropdown.Item>
                     </Dropdown.Menu>
+
                   </Dropdown>
+
                   <NavLink className="nav-icon position-relative text-decoration-none"
                     onClick={handleShowProfile}>
                     <FontAwesomeIcon icon={faUser} style={{ color: '#702963' }} />
                   </NavLink>
-                  <NavLink className="nav-icon position-relative text-decoration-none" to="#">
+
+                  <NavLink className="nav-icon position-relative text-decoration-none" to={`/favorites`}>
                     <FontAwesomeIcon icon={faHeart} style={{ color: '#702963' }} />
                   </NavLink>
                 </li>

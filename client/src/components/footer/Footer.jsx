@@ -39,7 +39,6 @@ export default function Footer() {
                         <ul className="list-unstyled text-light footer-link-list">
                             <li><Link className="text-decoration-none" to="/about">About</Link></li>
                             <li><Link className="text-decoration-none" to="/contacts">Contacts</Link></li>
-                            <li><Link className="text-decoration-none" to="/contacts">FAQs</Link></li>
                         </ul>
                     </div>
 
@@ -64,13 +63,6 @@ export default function Footer() {
                                 <Link className="text-light text-decoration-none" target="_blank" to="https://www.linkedin.com/"><i className="fab fa-linkedin fa-lg fa-fw"></i></Link>
                             </li>
                         </ul>
-                    </div>
-                    <div className="col-auto">
-                        <label className="sr-only" htmlFor="subscribeEmail">Email address</label>
-                        <div className="input-group mb-2">
-                            <input type="text" className="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address" />
-                            <div className="input-group-text btn-success text-light">Subscribe</div>
-                        </div>
                     </div>
                 </div>
             </div>

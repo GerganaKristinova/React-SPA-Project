@@ -30,11 +30,11 @@ export default function GemEdit() {
         await gemService.editGem(gemId, editedData)
 
         if(gem.category === 'raw-gems') {
-            navigate('/gems/raw-gems')
+            navigate(`/gems/raw-gems/${gemId}`)
         } else if(gem.category === 'tumbled-gems') {
-            navigate('/gems/tumbled-gems')
+            navigate(`/gems/tumbled-gems/${gemId}`)
         }else if(gem.category === 'shaped-gems') {
-            navigate('/gems/shaped-gems')
+            navigate(`/gems/shaped-gems/${gemId}`)
         }else {
             navigate('/404')
         }

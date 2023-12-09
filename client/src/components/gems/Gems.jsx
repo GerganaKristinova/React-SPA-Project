@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState, useContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import * as gemsService from '../../services/gemsService'
 import GemsListItem from "./gems-list-item/GemsListItem";
-
 
 export default function Gems() {
     const [gems, setGems] = useState([]);
@@ -38,7 +37,7 @@ export default function Gems() {
     return (
         <div className="row">
             <h3 className="text-center">{title}</h3>
-            {gems.map(gem =>
+            {gems.map(gem => 
                 <GemsListItem key={gem._id} {...gem} />
             )}
 
@@ -46,6 +45,5 @@ export default function Gems() {
                 <h3 className="no-posts">No gem posts created yet!</h3>
             )}
         </div>
-
     )
 }

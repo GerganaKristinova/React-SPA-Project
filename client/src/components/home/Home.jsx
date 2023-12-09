@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+import * as gemsService from '../../services/gemsService'
+import PostsSneakPeak from "./posts-sneak-peak/PostsSneakPeak";
 
 export default function Home() {
+
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    gemsService.getLatest()
+      .then(setPosts)
+  }, [])
 
   return (
     <>
@@ -15,7 +26,7 @@ export default function Home() {
             <div className="container">
               <div className="row p-5">
                 <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                  <img style={{width: '70%'}} className="img-fluid" src="./assets/img/crystal_3.webp" alt="" />
+                  <img style={{ maxWidth: '60%' }} className="img-fluid" src="./assets/img/crystal_3.webp" alt="" />
                 </div>
                 <div className="col-lg-6 mb-0 d-flex align-items-center">
                   <div className="text-align-left align-self-center">
@@ -33,7 +44,7 @@ export default function Home() {
             <div className="container">
               <div className="row p-5">
                 <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                  <img className="img-fluid" src="./assets/img/crystal_8.png" alt="" />
+                  <img style={{ maxWidth: '60%' }} className="img-fluid" src="./assets/img/crystal_8.png" alt="" />
                 </div>
                 <div className="col-lg-6 mb-0 d-flex align-items-center">
                   <div className="text-align-left">
@@ -51,7 +62,7 @@ export default function Home() {
             <div className="container">
               <div className="row p-5">
                 <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                  <img style={{width: '70%'}} className="img-fluid card-img" src="./assets/img/crystal_4.png" alt="" />
+                  <img style={{ maxWidth: '60%' }} className="img-fluid card-img" src="./assets/img/crystal_4.png" alt="" />
                 </div>
                 <div className="col-lg-6 mb-0 d-flex align-items-center">
                   <div className="text-align-left">
@@ -81,17 +92,17 @@ export default function Home() {
         </div>
         <div className="row">
           <div className="col-12 col-md-4 p-5 mt-3">
-            <Link to="/raw-gems"><img src="./assets/img/crystal_5.webp" className="rounded-circle img-fluid border" /></Link>
+            <Link to="/gems/raw-gems"><img src="./assets/img/crystal_5.webp" className="rounded-circle img-fluid border" /></Link>
             <h5 className="text-center mt-3 mb-3">Raw Gems</h5>
             <p className="text-center"><Link to="/gems/raw-gems" className="btn btn-success">See All</Link></p>
           </div>
           <div className="col-12 col-md-4 p-5 mt-3">
-            <Link to="/tumbled-gems"><img src="./assets/img/crystal_7.jpg" className="rounded-circle img-fluid border" /></Link>
+            <Link to="/gems/tumbled-gems"><img src="./assets/img/crystal_7.jpg" className="rounded-circle img-fluid border" /></Link>
             <h2 className="h5 text-center mt-3 mb-3">Tumbled Gems</h2>
             <p className="text-center"><Link to="/gems/tumbled-gems" className="btn btn-success">See All</Link></p>
           </div>
           <div className="col-12 col-md-4 p-5 mt-3">
-            <Link to="/shaped-gems"><img src="./assets/img/crystal_6.jpg" className="rounded-circle img-fluid border" /></Link>
+            <Link to="/gems/shaped-gems"><img src="./assets/img/crystal_6.jpg" className="rounded-circle img-fluid border" /></Link>
             <h2 className="h5 text-center mt-3 mb-3">Shaped gems</h2>
             <p className="text-center"><Link to="/gems/shaped-gems" className="btn btn-success">See All</Link></p>
           </div>
@@ -101,89 +112,19 @@ export default function Home() {
         <div className="container py-5">
           <div className="row text-center py-3">
             <div className="col-lg-6 m-auto">
-              <h1 className="h1">Reviews</h1>
+              <h1 className="h1">Sneak Peak Posts</h1>
               <p>
-                You can check out our crystal reviews in the section below.
+                Get a sneak peak of our posts! You can register for even more posts and details! 
               </p>
             </div>
           </div>
           <div className="row">
-            <div className="col-12 col-md-4 mb-4">
-              <div className="card h-100">
-                <a href="shop-single.html">
-                  <img src="./assets/img/feature_prod_01.jpg" className="card-img-top" alt="..." />
-                </a>
-                <div className="card-body">
-                  <ul className="list-unstyled d-flex justify-content-between">
-                    <li>
-                      <i className="text-warning fa fa-star"></i>
-                      <i className="text-warning fa fa-star"></i>
-                      <i className="text-warning fa fa-star"></i>
-                      <i className="text-muted fa fa-star"></i>
-                      <i className="text-muted fa fa-star"></i>
-                    </li>
-                    <li className="text-muted text-right">$240.00</li>
-                  </ul>
-                  <a href="shop-single.html" className="h2 text-decoration-none text-dark">Gym Weight</a>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
-                  </p>
-                  <p className="text-muted">Reviews (24)</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-md-4 mb-4">
-              <div className="card h-100">
-                <a href="shop-single.html">
-                  <img src="./assets/img/feature_prod_02.jpg" className="card-img-top" alt="..." />
-                </a>
-                <div className="card-body">
-                  <ul className="list-unstyled d-flex justify-content-between">
-                    <li>
-                      <i className="text-warning fa fa-star"></i>
-                      <i className="text-warning fa fa-star"></i>
-                      <i className="text-warning fa fa-star"></i>
-                      <i className="text-muted fa fa-star"></i>
-                      <i className="text-muted fa fa-star"></i>
-                    </li>
-                    <li className="text-muted text-right">$480.00</li>
-                  </ul>
-                  <a href="shop-single.html" className="h2 text-decoration-none text-dark">Cloud Nike Shoes</a>
-                  <p className="card-text">
-                    Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.
-                  </p>
-                  <p className="text-muted">Reviews (48)</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-md-4 mb-4">
-              <div className="card h-100">
-                <a href="shop-single.html">
-                  <img src="./assets/img/feature_prod_03.jpg" className="card-img-top" alt="..." />
-                </a>
-                <div className="card-body">
-                  <ul className="list-unstyled d-flex justify-content-between">
-                    <li>
-                      <i className="text-warning fa fa-star"></i>
-                      <i className="text-warning fa fa-star"></i>
-                      <i className="text-warning fa fa-star"></i>
-                      <i className="text-warning fa fa-star"></i>
-                      <i className="text-warning fa fa-star"></i>
-                    </li>
-                    <li className="text-muted text-right">$360.00</li>
-                  </ul>
-                  <a href="shop-single.html" className="h2 text-decoration-none text-dark">Summer Addides Shoes</a>
-                  <p className="card-text">
-                    Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.
-                  </p>
-                  <p className="text-muted">Reviews (74)</p>
-                </div>
-              </div>
+              {posts.map(post => <PostsSneakPeak key={post._id} {...post} />)}
+
+              {!posts.length && <p>No gem posts yet</p>}
             </div>
           </div>
-        </div>
       </section>
-
     </>
 
   )

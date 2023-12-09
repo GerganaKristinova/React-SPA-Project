@@ -55,7 +55,17 @@ export const editGem = async (gemId, data) => {
     return result;
 }
 
-export const deleteGem = async (gemId) => request.remove(`${baseUrl}/${gemId}`);
+export const deleteGem = (gemId) => request.remove(`${baseUrl}/${gemId}`);
 
+export const getLatest = async () => {
+    const query = new URLSearchParams({
+        offset: 0,
+        pageSize: 3,
+    });
+
+    const result = await request.get(`${baseUrl}?${query}`);
+
+    return result;
+}
 
 

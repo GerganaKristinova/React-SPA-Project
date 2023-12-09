@@ -6,22 +6,19 @@ import AuthContext from "../../contexts/authContext";
 
 export default function GemDetails() {
     const navigate = useNavigate()
-    const { isAuthenticated, userId } = useContext(AuthContext)
+    const { userId } = useContext(AuthContext)
     const [gem, setGem] = useState({});
-    const { gemType, gemId } = useParams()
+    const { gemType, gemId } = useParams();
 
     useEffect(() => {
         gemsService.getOneGem(gemId)
             .then(result => setGem(result));
-
     }, [gemType, gemId]);
 
     const deleteButtonClickHandler = async () => {
         const hasConfirmed = confirm(`Are you sure you want to delete ${gem.crystal}`);
-
         if (hasConfirmed) {
             await gemsService.deleteGem(gemId);
-
             switch (gem.category) {
                 case "raw-gems":
                     navigate('/gems/raw-gems')
@@ -38,7 +35,6 @@ export default function GemDetails() {
             }
         }
     }
-
     return (
         <section className="bg-light">
             <div className="container pb-5">
@@ -53,15 +49,6 @@ export default function GemDetails() {
                             <div className="card-body">
                                 <h1 className="h2">{gem.crystal}</h1>
                                 <br />
-                                {/* Rating system 
-                                <p className="py-2">
-                                    <i className="fa fa-star text-warning"></i>
-                                    <i className="fa fa-star text-warning"></i>
-                                    <i className="fa fa-star text-warning"></i>
-                                    <i className="fa fa-star text-warning"></i>
-                                    <i className="fa fa-star text-secondary"></i>
-                                    <span className="list-inline-item text-dark">Rating 4.8 | 36 Comments</span>
-                                </p> */}
                                 <ul className="list-inline">
                                     <li className="list-inline-item">
                                         <h6>Energy:</h6>
@@ -78,7 +65,7 @@ export default function GemDetails() {
                                         <p className="details"><strong>{gem.zodiac}</strong></p>
                                     </li>
                                 </ul>
-                                
+
                                 <ul className="list-inline">
                                     <li className="list-inline-item">
                                         <h6>Specifics:</h6>
@@ -87,7 +74,6 @@ export default function GemDetails() {
                                         <p className="details"><strong>{gem.specifics}</strong></p>
                                     </li>
                                 </ul>
-
                                 <ul className="list-inline">
                                     <li className="list-inline-item">
                                         <h6>Cleansing:</h6>
@@ -96,17 +82,10 @@ export default function GemDetails() {
                                         <p className="details"><strong>{gem.cleansing}</strong></p>
                                     </li>
                                 </ul>
-
                                 <h6>Summary:</h6>
                                 <p className="details">{gem.summary}</p>
-
                                 <input type="hidden" name="product-title" value="Activewear" />
                                 <div className="row pb-3">
-                                    {isAuthenticated && userId !== gem._ownerId && (
-                                        <div className="col d-grid">
-                                            <button type="submit" className="btn btn-success btn-lg" name="submit" value="buy">Add to Favorites ♥</button>
-                                        </div>
-                                    )}
                                     <div className="col d-grid">
                                         <Link className="btn btn-success btn-lg link" to={`/gems/${gemType}`}>Back ↩</Link>
                                     </div>
@@ -121,7 +100,6 @@ export default function GemDetails() {
                                         </div>
                                     </div>
                                 )}
-
                             </div>
                         </div>
                     </div>

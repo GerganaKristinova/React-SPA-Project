@@ -1,8 +1,18 @@
+import { Link } from "react-router-dom"
+import styles from "./PageNotFound.module.css"
+
 export default function PageNotFound() {
     return (
-        <div style={{margin: '10em'}}>
-            <h1 style={{ textAlign: 'center', color: '#702963', fontSize: '10em'}}>404</h1>
-            <h3 style={{ textAlign: 'center', color: '#702963'}}>Page Not Found</h3>
-        </div>
+        <>
+            <h1>404 Page Not Found</h1>
+            <section className={styles.errorContainer}>
+                <span className={styles.four}><span className={styles.screenReaderText}>4</span></span>
+                <span className={styles.zero}><span className={styles.screenReaderText}>0</span></span>
+                <span className={styles.four}><span className={styles.screenReaderText}>4</span></span>
+            </section>
+            <div className={styles.linkContainer}>
+                <Link to="/" className={styles.moreLink}>Back To Home</Link>
+            </div>
+        </>
     )
 }
