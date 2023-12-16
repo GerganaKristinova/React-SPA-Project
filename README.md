@@ -9,14 +9,14 @@
 This was my React Project Defense at the university. Showcasing a blog post type of website with fun UI.
 
 ## Screenshots: 📷
-### Here are some of the pages available...
-### Home page
+### Here are some of the available pages...
+#### Home page
 
 ![Capture 12](https://github.com/TabhitaBlackmore/React-SPA-Project/assets/135979731/28b42b79-923b-45ac-9d0c-72fa6580622f)
-### Dashboard page
+#### Dashboard page
 
 ![Capture 13](https://github.com/TabhitaBlackmore/React-SPA-Project/assets/135979731/2d8f96e7-793d-400b-b343-86b1d25f8630)
-### Details page
+#### Details page
 
 ![Capture 14](https://github.com/TabhitaBlackmore/React-SPA-Project/assets/135979731/55bcd6b7-8f85-4316-90d6-f4b95a921d31)
 
