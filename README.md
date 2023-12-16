@@ -43,12 +43,12 @@ This was my React Project Defense at the university. Showcasing a blog post type
 
 ## Approach: 🚶
 1. Application Structure
-1.1 Public Part (Accessible without authentication)
-1.2 Private Part (Available for authenticated users)
+   * Public Part (Accessible without authentication)
+   * Private Part (Available for authenticated users)
 2. Mix of static and dynamic pages
-2.1 Static Pages
-    * About
-    * Contacts
+   * Static Pages
+   * About
+   * Contacts
 2.2 Dynamic Pages
     * Home
     * Dashboard
