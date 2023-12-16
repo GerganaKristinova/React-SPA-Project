@@ -34,12 +34,12 @@ This was my React Project Defense at the university. Showcasing a blog post type
 2. Open with VSC 
 3. Open 2 terminals one for the client and one for the server
 4. On the server terminal
-* Type "cd server"
-* Then "node ./server.js"
+    * Type "cd server"
+    * Then "node ./server.js"
 5. On the client terminal
-* Type "cd client"
-* Then "npm install"
-* And lastly "npm run dev"
+    * Type "cd client"
+    * Then "npm install"
+    * And lastly "npm run dev"
 
 ## Approach: 🚶
 1. Application Structure
@@ -47,13 +47,13 @@ This was my React Project Defense at the university. Showcasing a blog post type
 1.2 Private Part (Available for authenticated users)
 2. Mix of static and dynamic pages
 2.1 Static Pages
-* About
-* Contacts
+    * About
+    * Contacts
 2.2 Dynamic Pages
-* Home
-* Dashboard
-* Favorites
-* User Profile
+    * Home
+    * Dashboard
+    * Favorites
+    * User Profile
 4. Guests, Logged in users and creators
 4.1 Guests can only see the public pages and cannot interact
 4.2 Logged in users can create posts and save them to favorites
