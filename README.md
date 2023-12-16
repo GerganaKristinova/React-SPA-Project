@@ -1,9 +1,9 @@
 # React SPA project
 
 ## Table of Content: 📑
-* [About the Project]
-* [Screenshots]
-* [Technologies Used]
+* [About the Project](#about-the-project)
+* [Screenshots](#screenshots)
+* [Technologies Used](#technologies-used)
 
 ## About the Project: 📚
 This was my React Project Defense at the university. Showcasing a blog post type of website with fun UI.
