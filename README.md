@@ -3,7 +3,9 @@
 ## Table of Content: 📑
 * [About the Project](#about-the-project-)
 * [Screenshots](#screenshots-)
-* [Technologies Used](#technologies-used-)
+* [Technologies Used](#technologies-used-%EF%B8%8F)
+* [Setup/Installation]()
+* [Approach]()
 
 ## About the Project: 📚
 This was my React Project Defense at the university. Showcasing a blog post type of website with fun UI.
