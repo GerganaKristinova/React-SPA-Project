@@ -4,8 +4,8 @@
 * [About the Project](#about-the-project-)
 * [Screenshots](#screenshots-)
 * [Technologies Used](#technologies-used-%EF%B8%8F)
-* [Setup/Installation]()
-* [Approach]()
+* [Setup/Installation](#setup--installation-)
+* [Approach](#approach-)
 
 ## About the Project: 📚
 This was my React Project Defense at the university. Showcasing a blog post type of website with fun UI.
