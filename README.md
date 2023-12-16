@@ -43,21 +43,21 @@ This was my React Project Defense at the university. Showcasing a blog post type
 
 ## Approach: 🚶
 1. Application Structure
-* Public Part (Accessible without authentication)
-* Private Part (Available for authenticated users)
+   * Public Part (Accessible without authentication)
+   * Private Part (Available for authenticated users)
 2. Mix of static and dynamic pages
-* Static Pages
-   * About
-   * Contacts
-* Dynamic Pages
-   * Home
-   * Dashboard
-   * Favorites
+   * Static Pages
+      * About
+      * Contacts
+   * Dynamic Pages
+      * Home
+      * Dashboard
+      * Favorites
       * User Profile
 4. Guests, Logged in users and creators
-* Guests can only see the public pages and cannot interact
-* Logged in users can create posts and save them to favorites
-* Creators can edit and delete their posts
+   * Guests can only see the public pages and cannot interact
+   * Logged in users can create posts and save them to favorites
+   * Creators can edit and delete their posts
 5. Client-side routing using React Router
 6. Google Maps API
     
