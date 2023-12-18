@@ -8,7 +8,7 @@
 * [Approach](#approach-)
 
 ## About the Project: 📚
-This was my React Project Defense at the university. Showcasing a blog post type of website with fun UI.
+This was my React Defense Project at the university. Showcasing a blog post type of website with fun UI.
 
 ## Screenshots: 📷
 ### Here are some of the available pages...
