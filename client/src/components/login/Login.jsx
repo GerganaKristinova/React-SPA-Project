@@ -19,9 +19,24 @@ export default function Login() {
   }
 
   return (
-    <div className="container py-5" style={{marginBottom: '18rem'}}>
+    <div style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundImage: "url(./assets/img/register.jpg)",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      paddingTop: '10em',
+      paddingBottom: '10em'
+    }}>
       <div className="row py-5">
-        <form className="col-md-9 m-auto" onSubmit={onLoginSubmit}>
+        <form style={{
+          backgroundColor: 'white',
+          padding: '2em 2em',
+          borderRadius: '10px'
+        }}
+          className="col-md-9 m-auto" onSubmit={onLoginSubmit}>
+          <h2 style={{ color: '#702963', paddingBottom: '1em' }}>Login</h2>
           <div className="row">
             <div className="form-group mb-3">
               <label htmlFor="email">Email</label>
@@ -55,11 +70,11 @@ export default function Login() {
               <button type="submit" className="btn btn-success btn-lg px-3">Login</button>
             </div>
             <div className="col text-end mt-2">
-              <p><Link style={{color: '#656565'}}className="text-decoration-none" to="/register">If you don't have a profile click <strong className='text-success'>HERE</strong></Link></p>
+              <p><Link style={{ color: '#656565' }} className="text-decoration-none" to="/register">If you don't have a profile click <strong className='text-success'>HERE</strong></Link></p>
             </div>
-          
+
           </div>
-        
+
         </form>
 
       </div>

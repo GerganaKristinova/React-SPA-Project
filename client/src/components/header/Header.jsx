@@ -12,7 +12,6 @@ import Profile from "../profile/Profile";
 export default function Header() {
   const {
     isAuthenticated,
-    userId,
   } = useContext(AuthContext)
 
   const [showProfile, setShowProfile] = useState(false);
@@ -21,12 +20,11 @@ export default function Header() {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light shadow">
+      {/*Navigation*/}
       <div className="container d-flex justify-content-between align-items-center">
-
         <Link className="navbar-brand text-success logo h1 align-self-center" to="/">
           Gem Posts
         </Link>
-
         <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -98,8 +96,6 @@ export default function Header() {
 
               </>
             )}
-
-
           </div>
         </div>
 

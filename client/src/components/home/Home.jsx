@@ -5,7 +5,6 @@ import * as gemsService from '../../services/gemsService'
 import PostsSneakPeak from "./posts-sneak-peak/PostsSneakPeak";
 
 export default function Home() {
-
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
@@ -48,8 +47,8 @@ export default function Home() {
                 </div>
                 <div className="col-lg-6 mb-0 d-flex align-items-center">
                   <div className="text-align-left">
-                    <h1 className="h1">Different Caregories</h1>
-                    <h3 className="h2">You can choose from multiple categories</h3>
+                    <h1 className="h1">Caregories</h1>
+                    <h3 className="h2">Choose from multiple categories</h3>
                     <p>
                       Choose the category that best suits your unique crystal and share it with others.
                     </p>

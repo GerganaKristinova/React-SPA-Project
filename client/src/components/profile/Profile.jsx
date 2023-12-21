@@ -24,10 +24,20 @@ export default function Profile({ setShowProfile }) {
                 <Container>
                     <Row>
                         <Col>
-                            <Image style={{ borderRadius: "50%", height: "100px", width: "100px", overflow: 'hidden', objectFit: 'cover' }} src={profile.imageUrl} alt={profile.username} />
+                            <Image style={{ 
+                                borderRadius: "50%",
+                                height: "100px", 
+                                width: "100px",
+                                overflow: 'hidden',
+                                objectFit: 'cover' 
+                            }} 
+                            src={profile?.imageUrl ? 
+                            profile.imageUrl : 
+                            "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1200px-No_image_available.svg.png"} 
+                            alt={profile.username} />
                         </Col>
                         <Col>
-                            <p>{profile.description}</p>
+                            <p>{profile?.description ? profile.description : "this profile has no description"}</p>
                         </Col>
                     </Row>
                 </Container>

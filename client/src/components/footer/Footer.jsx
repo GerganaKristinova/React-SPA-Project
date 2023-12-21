@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
-        <footer className="bg-dark" id="tempaltemo_footer">
+        <footer className="bg-dark footer navbar-fixed-bottom" id="tempaltemo_footer">
             <div className="container">
                 <div className="row">
 

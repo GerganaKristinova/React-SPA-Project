@@ -1,0 +1,8 @@
+.validation {
+    color: red;
+    display: none;
+}
+
+input:invalid[blurred='true'] ~ .validation {
+    display: block;
+}

@@ -131,7 +131,7 @@ textarea {
     color: #bbb;
 }
 
-h1 {
+.errorHeading {
     text-align: center;
     margin: 150px 15px;
     color: #702963;

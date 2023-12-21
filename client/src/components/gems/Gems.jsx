@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import * as gemsService from '../../services/gemsService'
 import GemsListItem from "./gems-list-item/GemsListItem";
+import { useScrollTo } from "../../hooks/useScrollTo";
 
 export default function Gems() {
     const [gems, setGems] = useState([]);
@@ -33,6 +34,8 @@ export default function Gems() {
         }
 
     }, [location])
+
+    useScrollTo(0,0)
 
     return (
         <div className="row">

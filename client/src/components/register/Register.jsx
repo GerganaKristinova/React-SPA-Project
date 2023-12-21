@@ -1,18 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 
 import AuthContext from "../../contexts/authContext";
+import styles from "./RegisterValidation.module.css"
 
 export default function Register() {
     const { registerSubmitHandler } = useContext(AuthContext);
-    const [registerInfo, setRegisterInfo] = useState({
+    const navigate = useNavigate()
+
+    const initialValues = {
         username: '',
         email: '',
         password: '',
         'confirm-password': '',
         imageUrl: '',
         description: '',
-    })
+    }
+
+    const [registerInfo, setRegisterInfo] = useState(initialValues)
+    const [blurredInput, setBlurredInput] = useState({})
 
     const onChange = (e) => {
         setRegisterInfo(state => ({ ...state, [e.target.name]: e.target.value }))
@@ -20,18 +26,40 @@ export default function Register() {
 
     const onRegisterSubmit = (e) => {
         e.preventDefault()
-        const userData = Object.fromEntries(new FormData(e.currentTarget));
+        registerSubmitHandler(Object.fromEntries(new FormData(e.currentTarget)))
+        navigate("/login")
+    }
 
-        registerSubmitHandler(userData)
+    const onFocusHandler = (e) => {
+        setBlurredInput(state => ({...state, [e.target.name]: false}))
+    }
+
+    const onBlurHandler = (e) => {
+        setBlurredInput(state => ({...state, [e.target.name]: true}))
     }
 
     return (
-        <div className="container py-5">
+        <div className="wrapper" style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundImage: "url(./assets/img/register.jpg)",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            paddingTop: '10em',
+            paddingBottom: '10em'
+        }}>
             <div className="row py-5">
-                <form className="col-md-9 m-auto" onSubmit={onRegisterSubmit}>
+                <form style={{
+                    backgroundColor: 'white',
+                    padding: '2em 2em',
+                    borderRadius: '10px',
+                }} 
+                className="col-md-9 m-auto" onSubmit={onRegisterSubmit}>
+                <h2 style={{color: '#702963', paddingBottom: '1em'}}>Register</h2>
                     <div className="row">
                         <div className="form-group mb-3">
-                            <label htmlFor="username">Username</label>
+                            <label htmlFor="username">Username <strong style={{color: '#9e1985'}}>*</strong></label>
                             <input
                                 type="text"
                                 className="form-control mt-1"
@@ -40,22 +68,35 @@ export default function Register() {
                                 placeholder="Username"
                                 onChange={onChange}
                                 value={registerInfo.username}
+                                pattern="^[a-zA-Z0-9]{3,16}$"
+                                required
+                                onBlur={onBlurHandler}
+                                onFocus={onFocusHandler}
+                                blurred={blurredInput.username?.toString()}
                             />
+                            {/* <span className={styles.required}>Username is required</span> */}
+                            <span className={styles.validation}>Username should be 3-16 characters and should include only letters and numbers</span>
                         </div>
                         <div className="form-group mb-3">
-                            <label htmlFor="email">Email</label>
+                            <label htmlFor="email">Email <strong style={{color: '#9e1985'}}>*</strong></label>
                             <input
-                                type="text"
+                                type="email"
                                 className="form-control mt-1"
                                 id="email"
                                 name="email"
                                 placeholder="Email"
                                 onChange={onChange}
                                 value={registerInfo.email}
+                                required
+                                onBlur={onBlurHandler}
+                                onFocus={onFocusHandler}
+                                blurred={blurredInput.email?.toString()}
                             />
+                            {/* <span className={styles.required}>Email is required</span> */}
+                            <span className={styles.validation}>Email should be in the following format: name@example.com</span>
                         </div>
                         <div className="form-group mb-3">
-                            <label htmlFor="password">Password</label>
+                            <label htmlFor="password">Password <strong style={{color: '#9e1985'}}>*</strong></label>
                             <input
                                 type="password"
                                 className="form-control mt-1"
@@ -64,10 +105,17 @@ export default function Register() {
                                 placeholder="Password"
                                 onChange={onChange}
                                 value={registerInfo.password}
+                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+                                required
+                                onBlur={onBlurHandler}
+                                onFocus={onFocusHandler}
+                                blurred={blurredInput.password?.toString()}
                             />
+                            {/* <span className={styles.required}>Password is required</span> */}
+                            <span className={styles.validation}>Password should be should be 8 or more characters and contain at least one uppercase letter, one lowercase letter, and one number</span>
                         </div>
                         <div className="form-group mb-3">
-                            <label htmlFor="confirm-password">Confirm Password</label>
+                            <label htmlFor="confirm-password">Confirm Password <strong style={{color: '#9e1985'}}>*</strong></label>
                             <input
                                 type="password"
                                 className="form-control mt-1"
@@ -76,10 +124,17 @@ export default function Register() {
                                 placeholder="Confirm Password"
                                 onChange={onChange}
                                 value={registerInfo['confirm-password']}
+                                pattern={registerInfo.password}
+                                required
+                                onBlur={onBlurHandler}
+                                onFocus={onFocusHandler}
+                                blurred={blurredInput['confirm-password']?.toString()}
                             />
+                            {/* <span className={styles.required}>Confirming your password is required</span> */}
+                            <span className={styles.validation}>Passwords should match</span>
                         </div>
                         <div className="form-group mb-3">
-                            <label htmlFor="imageUrl">Profile Picture</label>
+                            <label htmlFor="imageUrl">Profile Picture <span style={{color: '#9e1985'}}>(Optional)</span></label>
                             <input
                                 type="text"
                                 className="form-control mt-1"
@@ -91,7 +146,7 @@ export default function Register() {
                             />
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="description">Description</label>
+                            <label htmlFor="description">Description <span style={{color: '#9e1985'}}>(Optional)</span></label>
                             <textarea
                                 className="form-control mt-1"
                                 id="description"
@@ -116,6 +171,6 @@ export default function Register() {
                 </form>
 
             </div>
-        </div>
+            </div>
     )
 }
