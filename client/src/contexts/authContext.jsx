@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import * as authService from '../services/authService'
@@ -13,32 +13,43 @@ export const AuthProvider = ({
 }) => {
   const navigate = useNavigate();
   const [auth, setAuth] = usePersistedState('auth', {});
+  const [loginError, setLoginError] = useState(null)
+  const [registerError, setRegisterError] = useState(null)
 
   const loginSubmitHandler = async (values) => {
-    const result = await authService.login(values.email, values.password)
+    try {
+      const result = await authService.login(values.email, values.password)
 
-    setAuth(result)
+      setAuth(result)
 
-    localStorage.setItem('accessToken', result.accessToken)
+      localStorage.setItem('accessToken', result.accessToken)
 
-    navigate('/')
+      navigate('/')
+    } catch (error) {
+      setLoginError(error.message)
+    }
   }
 
   const registerSubmitHandler = async (values) => {
-    const result = await authService.register(values.email, values.password, values.username, values.imageUrl, values.description)
+    try {
+      const result = await authService.register(values.email, values.password, values.username, values.imageUrl, values.description)
 
-    setAuth(result)
+      setAuth(result)
 
-    localStorage.setItem('accessToken', result.accessToken)
+      localStorage.setItem('accessToken', result.accessToken)
 
-    navigate('/')
+      navigate('/')
+    } catch (error) {
+      setRegisterError(error.message)
+    }
+
   }
 
   const logoutHandler = () => {
     setAuth({})
     localStorage.removeItem('accessToken');
   }
-  
+
   const values = {
     loginSubmitHandler,
     registerSubmitHandler,
@@ -49,6 +60,8 @@ export const AuthProvider = ({
     imageUrl: auth.imageUrl,
     userId: auth._id,
     isAuthenticated: !!auth.accessToken,
+    loginError: loginError,
+    registerError: registerError,
   }
 
   return (

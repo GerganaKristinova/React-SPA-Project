@@ -6,3 +6,8 @@
 input:invalid[blurred='true'] ~ .validation {
     display: block;
 }
+
+.error {
+    color: red;
+    display: block;
+}

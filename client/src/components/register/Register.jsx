@@ -1,12 +1,11 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 
 import AuthContext from "../../contexts/authContext";
 import styles from "./RegisterValidation.module.css"
 
 export default function Register() {
-    const { registerSubmitHandler } = useContext(AuthContext);
-    const navigate = useNavigate()
+    const { registerSubmitHandler, registerError } = useContext(AuthContext);
 
     const initialValues = {
         username: '',
@@ -27,22 +26,18 @@ export default function Register() {
     const onRegisterSubmit = (e) => {
         e.preventDefault()
         registerSubmitHandler(Object.fromEntries(new FormData(e.currentTarget)))
-        navigate("/login")
     }
 
     const onFocusHandler = (e) => {
-        setBlurredInput(state => ({...state, [e.target.name]: false}))
+        setBlurredInput(state => ({ ...state, [e.target.name]: false }))
     }
 
     const onBlurHandler = (e) => {
-        setBlurredInput(state => ({...state, [e.target.name]: true}))
+        setBlurredInput(state => ({ ...state, [e.target.name]: true }))
     }
 
     return (
         <div className="wrapper" style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
             backgroundImage: "url(./assets/img/register.jpg)",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -54,12 +49,12 @@ export default function Register() {
                     backgroundColor: 'white',
                     padding: '2em 2em',
                     borderRadius: '10px',
-                }} 
-                className="col-md-9 m-auto" onSubmit={onRegisterSubmit}>
-                <h2 style={{color: '#702963', paddingBottom: '1em'}}>Register</h2>
+                }}
+                    className="col-md-9 m-auto" onSubmit={onRegisterSubmit}>
+                    <h2 style={{ color: '#702963', paddingBottom: '1em' }}>Register</h2>
                     <div className="row">
                         <div className="form-group mb-3">
-                            <label htmlFor="username">Username <strong style={{color: '#9e1985'}}>*</strong></label>
+                            <label htmlFor="username">Username <strong style={{ color: '#9e1985' }}>*</strong></label>
                             <input
                                 type="text"
                                 className="form-control mt-1"
@@ -74,11 +69,10 @@ export default function Register() {
                                 onFocus={onFocusHandler}
                                 blurred={blurredInput.username?.toString()}
                             />
-                            {/* <span className={styles.required}>Username is required</span> */}
                             <span className={styles.validation}>Username should be 3-16 characters and should include only letters and numbers</span>
                         </div>
                         <div className="form-group mb-3">
-                            <label htmlFor="email">Email <strong style={{color: '#9e1985'}}>*</strong></label>
+                            <label htmlFor="email">Email <strong style={{ color: '#9e1985' }}>*</strong></label>
                             <input
                                 type="email"
                                 className="form-control mt-1"
@@ -92,11 +86,10 @@ export default function Register() {
                                 onFocus={onFocusHandler}
                                 blurred={blurredInput.email?.toString()}
                             />
-                            {/* <span className={styles.required}>Email is required</span> */}
                             <span className={styles.validation}>Email should be in the following format: name@example.com</span>
                         </div>
                         <div className="form-group mb-3">
-                            <label htmlFor="password">Password <strong style={{color: '#9e1985'}}>*</strong></label>
+                            <label htmlFor="password">Password <strong style={{ color: '#9e1985' }}>*</strong></label>
                             <input
                                 type="password"
                                 className="form-control mt-1"
@@ -111,11 +104,10 @@ export default function Register() {
                                 onFocus={onFocusHandler}
                                 blurred={blurredInput.password?.toString()}
                             />
-                            {/* <span className={styles.required}>Password is required</span> */}
                             <span className={styles.validation}>Password should be should be 8 or more characters and contain at least one uppercase letter, one lowercase letter, and one number</span>
                         </div>
                         <div className="form-group mb-3">
-                            <label htmlFor="confirm-password">Confirm Password <strong style={{color: '#9e1985'}}>*</strong></label>
+                            <label htmlFor="confirm-password">Confirm Password <strong style={{ color: '#9e1985' }}>*</strong></label>
                             <input
                                 type="password"
                                 className="form-control mt-1"
@@ -130,11 +122,10 @@ export default function Register() {
                                 onFocus={onFocusHandler}
                                 blurred={blurredInput['confirm-password']?.toString()}
                             />
-                            {/* <span className={styles.required}>Confirming your password is required</span> */}
                             <span className={styles.validation}>Passwords should match</span>
                         </div>
                         <div className="form-group mb-3">
-                            <label htmlFor="imageUrl">Profile Picture <span style={{color: '#9e1985'}}>(Optional)</span></label>
+                            <label htmlFor="imageUrl">Profile Picture <span style={{ color: '#9e1985' }}>(Optional)</span></label>
                             <input
                                 type="text"
                                 className="form-control mt-1"
@@ -146,7 +137,7 @@ export default function Register() {
                             />
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="description">Description <span style={{color: '#9e1985'}}>(Optional)</span></label>
+                            <label htmlFor="description">Description <span style={{ color: '#9e1985' }}>(Optional)</span></label>
                             <textarea
                                 className="form-control mt-1"
                                 id="description"
@@ -157,6 +148,9 @@ export default function Register() {
                                 value={registerInfo.description}
                             />
                         </div>
+                        {registerError && (
+                            <span className={styles.error}>{`${registerError}, try logging in instead, or use another email`}</span>
+                        )}
                     </div>
                     <div className="row">
                         <div className="col text-start mt-2">
@@ -171,6 +165,6 @@ export default function Register() {
                 </form>
 
             </div>
-            </div>
+        </div>
     )
 }

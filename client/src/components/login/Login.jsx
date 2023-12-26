@@ -1,10 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 
 import AuthContext from "../../contexts/authContext";
 import { Link } from "react-router-dom";
 
 export default function Login() {
-  const { loginSubmitHandler } = useContext(AuthContext)
+  const { loginSubmitHandler, loginError } = useContext(AuthContext)
   const [loginInfo, setLoginInfo] = useState({ email: '', password: '' })
 
   const onChange = (e) => {
@@ -12,22 +12,19 @@ export default function Login() {
   }
 
   const onLoginSubmit = (e) => {
-    e.preventDefault()
-    const userData = Object.fromEntries(new FormData(e.currentTarget));
-
-    loginSubmitHandler(userData)
+      e.preventDefault()
+      const userData = Object.fromEntries(new FormData(e.currentTarget));
+  
+      loginSubmitHandler(userData)
   }
 
   return (
     <div style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
       backgroundImage: "url(./assets/img/register.jpg)",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       paddingTop: '10em',
-      paddingBottom: '10em'
+      paddingBottom: '10em',
     }}>
       <div className="row py-5">
         <form style={{
@@ -42,28 +39,31 @@ export default function Login() {
               <label htmlFor="email">Email</label>
               <input
                 type="text"
-                className="form-control
-                mt-1"
+                className="form-control mt-1"
                 id="email"
                 name="email"
                 placeholder="Email"
                 onChange={onChange}
                 value={loginInfo.email}
+                required
               />
             </div>
             <div className="form-group mb-3">
               <label htmlFor="password">Password</label>
               <input
                 type="password"
-                className="form-control
-                mt-1"
+                className="form-control mt-1"
                 id="password"
                 name="password"
                 placeholder="Password"
                 onChange={onChange}
                 value={loginInfo.password}
+                required
               />
             </div>
+            {loginError && (  
+              <span style={{color: 'red'}}>{loginError}</span>
+            )}
           </div>
           <div className="row">
             <div className="col text-start mt-2">
