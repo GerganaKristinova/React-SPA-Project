@@ -9,9 +9,14 @@ export default function Logout() {
     const { logoutHandler } = useContext(AuthContext)
     useEffect(() => {
         authService.logout()
-            .then(() => logoutHandler())
-            .then(() =>navigate('/'))
-            .catch(() => navigate('/'))
+            .then(() => {
+                logoutHandler()
+                navigate('/')
+            })
+            .catch(() => {
+                logoutHandler()
+                navigate('/login')
+            })
     }, [])
     return null;
 }

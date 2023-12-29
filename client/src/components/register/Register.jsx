@@ -36,6 +36,12 @@ export default function Register() {
         setBlurredInput(state => ({ ...state, [e.target.name]: true }))
     }
 
+    const onKeyDown = (e) => {
+        if (e.key === "Enter") {
+            setBlurredInput(state => ({ ...state, [e.target.name]: true }))
+        }
+    }
+
     return (
         <div className="wrapper" style={{
             backgroundImage: "url(./assets/img/register.jpg)",
@@ -61,13 +67,14 @@ export default function Register() {
                                 id="username"
                                 name="username"
                                 placeholder="Username"
-                                onChange={onChange}
                                 value={registerInfo.username}
-                                pattern="^[a-zA-Z0-9]{3,16}$"
+                                blurred={blurredInput.username?.toString()}
                                 required
+                                pattern="^[a-zA-Z0-9]{3,16}$"
+                                onChange={onChange}
                                 onBlur={onBlurHandler}
                                 onFocus={onFocusHandler}
-                                blurred={blurredInput.username?.toString()}
+                                onKeyDown={onKeyDown}
                             />
                             <span className={styles.validation}>Username should be 3-16 characters and should include only letters and numbers</span>
                         </div>
@@ -81,10 +88,11 @@ export default function Register() {
                                 placeholder="Email"
                                 onChange={onChange}
                                 value={registerInfo.email}
+                                blurred={blurredInput.email?.toString()}
                                 required
                                 onBlur={onBlurHandler}
                                 onFocus={onFocusHandler}
-                                blurred={blurredInput.email?.toString()}
+                                onKeyDown={onKeyDown}
                             />
                             <span className={styles.validation}>Email should be in the following format: name@example.com</span>
                         </div>
@@ -98,11 +106,12 @@ export default function Register() {
                                 placeholder="Password"
                                 onChange={onChange}
                                 value={registerInfo.password}
+                                blurred={blurredInput.password?.toString()}
                                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
                                 required
                                 onBlur={onBlurHandler}
                                 onFocus={onFocusHandler}
-                                blurred={blurredInput.password?.toString()}
+                                onKeyDown={onKeyDown}
                             />
                             <span className={styles.validation}>Password should be should be 8 or more characters and contain at least one uppercase letter, one lowercase letter, and one number</span>
                         </div>
@@ -117,10 +126,11 @@ export default function Register() {
                                 onChange={onChange}
                                 value={registerInfo['confirm-password']}
                                 pattern={registerInfo.password}
+                                blurred={blurredInput['confirm-password']?.toString()}
                                 required
                                 onBlur={onBlurHandler}
                                 onFocus={onFocusHandler}
-                                blurred={blurredInput['confirm-password']?.toString()}
+                                onKeyDown={onKeyDown}
                             />
                             <span className={styles.validation}>Passwords should match</span>
                         </div>
