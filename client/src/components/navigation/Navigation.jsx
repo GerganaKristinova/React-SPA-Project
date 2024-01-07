@@ -16,7 +16,7 @@ export default function Navigation() {
                         <i className="fa fa-envelope mx-2"></i>
                         <Link className="navbar-sm-brand text-light text-decoration-none" to="/contacts">gemposts@gmail.com</Link>
                         <i className="fa fa-phone mx-2"></i>
-                        <Link className="navbar-sm-brand text-light text-decoration-none" to="/contacts">089 020 0340</Link>
+                        <Link className="navbar-sm-brand text-light text-decoration-none" to="/contacts">089 999 9999</Link>
                     </div>
                     <div>
                         <Link className="text-light" to="http://facebook.com/" target="_blank" rel="sponsored"><i className="fab fa-facebook-f fa-sm fa-fw me-2"></i></Link>

@@ -35,17 +35,29 @@ export default function GemCreate() {
                     <div className="row">
                         <div className="form-group col-md-6 mb-3">
                             <label htmlFor="crystal">Crystal</label>
-                            <input type="text" className="form-control mt-1" id="crystal" name="crystal" placeholder="Crystal" />
+                            <input
+                                type="text"
+                                className="form-control mt-1"
+                                id="crystal" name="crystal"
+                                placeholder="Crystal"
+                                required
+                            />
                         </div>
                         <div className="form-group col-md-6 mb-3">
                             <label htmlFor="energy">Energy</label>
-                            <input type="text" className="form-control mt-1" id="energy" name="energy" placeholder="Energy" />
+                            <input
+                                type="text"
+                                className="form-control mt-1"
+                                id="energy" name="energy"
+                                placeholder="Energy"
+                                required
+                            />
                         </div>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="category">Category</label>
-                        <select className="form-control mt-1" id="category" name="category" placeholder="Category">
-                            <option value="choosecategory">Choose a category</option>
+                        <select defaultValue={''} className="form-control mt-1" id="category" name="category" placeholder="Category" required>
+                            <option value="" disabled>Choose a category</option>
                             <option value="raw-gems">Raw Gems</option>
                             <option value="tumbled-gems">Tumbled Gems</option>
                             <option value="shaped-gems">Shaped Gems</option>
@@ -53,8 +65,8 @@ export default function GemCreate() {
                     </div>
                     <div className="mb-3">
                         <label htmlFor="zodiac">Zodiac Sign</label>
-                        <select className="form-control mt-1" id="zodiac" name="zodiac" placeholder="Zodiac">
-                            <option value="choosezodiac">Choose a zodiac sign</option>
+                        <select defaultValue={''}  className="form-control mt-1" id="zodiac" name="zodiac" placeholder="Zodiac">
+                            <option value="" disabled>Choose a zodiac sign</option> 
                             <option value="Aries">Aries</option>
                             <option value="Taurus">Taurus</option>
                             <option value="Gemini">Gemini</option>
@@ -71,19 +83,46 @@ export default function GemCreate() {
                     </div>
                     <div className="mb-3">
                         <label htmlFor="specifics">Specifics</label>
-                        <input type="text" className="form-control mt-1" id="specifics" name="specifics" placeholder="Specifics" />
+                        <input
+                            type="text"
+                            className="form-control mt-1"
+                            id="specifics"
+                            name="specifics"
+                            placeholder="Specifics"
+                            required
+                        />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="cleansing">Cleansing</label>
-                        <input type="text" className="form-control mt-1" id="cleansing" name="cleansing" placeholder="Cleansing" />
+                        <input
+                            type="text"
+                            className="form-control mt-1"
+                            id="cleansing"
+                            name="cleansing"
+                            placeholder="Cleansing"
+                            required
+                        />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="imageUrl">Image</label>
-                        <input type="text" className="form-control mt-1" id="imageUrl" name="imageUrl" placeholder="Upload an image" />
+                        <input
+                            type="text"
+                            className="form-control mt-1"
+                            id="imageUrl"
+                            name="imageUrl"
+                            placeholder="Upload an image"
+                            required
+                        />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="summary">Summary</label>
-                        <textarea className="form-control mt-1" id="summary" name="summary" placeholder="Summary" rows="8"></textarea>
+                        <textarea
+                            className="form-control mt-1"
+                            id="summary" name="summary"
+                            placeholder="Summary"
+                            rows="8"
+                            required
+                        ></textarea>
                     </div>
                     <div className="row">
                         <div className="col text-end mt-2">

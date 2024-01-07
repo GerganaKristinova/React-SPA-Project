@@ -7,6 +7,15 @@ input:invalid[blurred='true'] ~ .validation {
     display: block;
 }
 
+.required {
+    color: red;
+    display: none;
+}
+
+input[value=""][blurred='true'] ~ .required {
+    display: block;
+}
+
 .error {
     color: red;
     display: block;

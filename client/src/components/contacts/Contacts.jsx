@@ -7,7 +7,7 @@ export default function Contacts() {
                 <div className="col-md-6 m-auto text-center">
                     <h1 style={{color: 'white'}}>Contact Us</h1>
                     <p style={{color: 'white'}}>
-                        While you wait to hear back from our team, don't forget to browse our Frequently Asked Questions for possible solutions.
+                        We will be with you shortly!
                     </p>
                     <ul className="list-unstyled text-light contacts-link-list">
                         <li>
@@ -16,7 +16,7 @@ export default function Contacts() {
                         </li>
                         <li>
                             <i className="fa fa-phone fa-fw"></i>
-                            <a style={{color: 'white'}} className="text-decoration-none" href="tel:010-020-0340">089 020 0340</a>
+                            <a style={{color: 'white'}} className="text-decoration-none" href="tel:010-020-0340">089 999 9999</a>
                         </li>
                         <li>
                             <i className="fa fa-envelope fa-fw"></i>

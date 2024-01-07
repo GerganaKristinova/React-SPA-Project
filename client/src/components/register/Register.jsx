@@ -24,6 +24,7 @@ export default function Register() {
     }
 
     const onRegisterSubmit = (e) => {
+        confirm('confirm')
         e.preventDefault()
         registerSubmitHandler(Object.fromEntries(new FormData(e.currentTarget)))
     }
@@ -39,7 +40,15 @@ export default function Register() {
     const onKeyDown = (e) => {
         if (e.key === "Enter") {
             setBlurredInput(state => ({ ...state, [e.target.name]: true }))
+            const form = e.target.form;
+            const index = [...form].indexOf(e.target);
+            form[index + 1].focus();
+            e.preventDefault();
         }
+    }
+
+    const onInvalidHandler = (e) => {
+        e.preventDefault()
     }
 
     return (
@@ -75,7 +84,9 @@ export default function Register() {
                                 onBlur={onBlurHandler}
                                 onFocus={onFocusHandler}
                                 onKeyDown={onKeyDown}
+                                onInvalid={onInvalidHandler}
                             />
+                            <span className={styles.required}>Username is required</span>
                             <span className={styles.validation}>Username should be 3-16 characters and should include only letters and numbers</span>
                         </div>
                         <div className="form-group mb-3">
@@ -93,7 +104,9 @@ export default function Register() {
                                 onBlur={onBlurHandler}
                                 onFocus={onFocusHandler}
                                 onKeyDown={onKeyDown}
+                                onInvalid={onInvalidHandler}
                             />
+                            <span className={styles.required}>Email is required</span>
                             <span className={styles.validation}>Email should be in the following format: name@example.com</span>
                         </div>
                         <div className="form-group mb-3">
@@ -112,7 +125,9 @@ export default function Register() {
                                 onBlur={onBlurHandler}
                                 onFocus={onFocusHandler}
                                 onKeyDown={onKeyDown}
+                                onInvalid={onInvalidHandler}
                             />
+                            <span className={styles.required}>Password is required</span>
                             <span className={styles.validation}>Password should be should be 8 or more characters and contain at least one uppercase letter, one lowercase letter, and one number</span>
                         </div>
                         <div className="form-group mb-3">
@@ -131,7 +146,9 @@ export default function Register() {
                                 onBlur={onBlurHandler}
                                 onFocus={onFocusHandler}
                                 onKeyDown={onKeyDown}
+                                onInvalid={onInvalidHandler}
                             />
+                            <span className={styles.required}>Confirming your password is required</span>
                             <span className={styles.validation}>Passwords should match</span>
                         </div>
                         <div className="form-group mb-3">
@@ -143,10 +160,11 @@ export default function Register() {
                                 name="imageUrl"
                                 placeholder="Profile Picture"
                                 onChange={onChange}
+                                onKeyDown={onKeyDown}
                                 value={registerInfo.imageUrl}
                             />
                         </div>
-                        <div className="mb-3">
+                        <div className="form-group mb-3">
                             <label htmlFor="description">Description <span style={{ color: '#9e1985' }}>(Optional)</span></label>
                             <textarea
                                 className="form-control mt-1"
@@ -155,6 +173,7 @@ export default function Register() {
                                 placeholder="Description"
                                 rows="4"
                                 onChange={onChange}
+                                onKeyDown={onKeyDown}
                                 value={registerInfo.description}
                             />
                         </div>

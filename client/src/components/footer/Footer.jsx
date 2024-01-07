@@ -15,7 +15,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <i className="fa fa-phone fa-fw"></i>
-                                <Link className="text-decoration-none" to="/contacts">089 020 0340</Link>
+                                <Link className="text-decoration-none" to="/contacts">089 999 9999</Link>
                             </li>
                             <li>
                                 <i className="fa fa-envelope fa-fw"></i>
