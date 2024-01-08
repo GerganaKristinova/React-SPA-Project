@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import * as gemsService from '../../services/gemsService'
+import { useScrollTo } from '../../hooks/useScrollTo'
 import PostsSneakPeak from "./posts-sneak-peak/PostsSneakPeak";
 
 export default function Home() {
+  useScrollTo(0,0)
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
@@ -121,7 +123,7 @@ export default function Home() {
               {posts.map(post => <PostsSneakPeak key={post._id} {...post} />)}
 
               {!posts.length && <p>No gem posts yet</p>}
-            </div>
+          </div>
           </div>
       </section>
     </>

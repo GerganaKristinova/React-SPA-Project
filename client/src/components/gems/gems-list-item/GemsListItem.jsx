@@ -15,7 +15,7 @@ export default function GemsListItem(gem) {
     const [isFavorited, setIsFavorited] = useState()
 
     const deleteButtonClickHandler = async () => {
-        const hasConfirmed = confirm(`Are you sure you want to delete ${gem.crystal}`);
+        const hasConfirmed = confirm(`Are you sure you want to delete ${gem.crystal}?`);
 
         if (hasConfirmed) {
             await gemsService.deleteGem(gem._id);
@@ -39,9 +39,10 @@ export default function GemsListItem(gem) {
 
     const addToFavoritesHandler = async (gemId, favoritedGem) => {
         if (isFavorited?.gemId === gemId) {
-            alert('gem already added');
+            alert('Gem already added to favorites!');
         } else {
             const result = await favoritesService.add(gemId, favoritedGem)
+            alert('Gem added to favorites.')
             setIsFavorited(result)
         }
     }

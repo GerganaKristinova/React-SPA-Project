@@ -16,7 +16,7 @@ export default function GemDetails() {
     }, [gemType, gemId]);
 
     const deleteButtonClickHandler = async () => {
-        const hasConfirmed = confirm(`Are you sure you want to delete ${gem.crystal}`);
+        const hasConfirmed = confirm(`Are you sure you want to delete ${gem.crystal}?`);
         if (hasConfirmed) {
             await gemsService.deleteGem(gemId);
             switch (gem.category) {

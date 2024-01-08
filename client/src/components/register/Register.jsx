@@ -24,7 +24,6 @@ export default function Register() {
     }
 
     const onRegisterSubmit = (e) => {
-        confirm('confirm')
         e.preventDefault()
         registerSubmitHandler(Object.fromEntries(new FormData(e.currentTarget)))
     }

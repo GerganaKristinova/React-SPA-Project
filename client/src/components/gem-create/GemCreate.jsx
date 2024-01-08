@@ -28,6 +28,15 @@ export default function GemCreate() {
         }
     }
 
+    const onKeyDown = (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault()
+            const form = e.target.form;
+            const index = [...form].indexOf(e.target);
+            form[index + 1].focus();
+        }
+    }
+
     return (
         <div className="container py-5">
             <div className="row py-5">
@@ -41,6 +50,7 @@ export default function GemCreate() {
                                 id="crystal" name="crystal"
                                 placeholder="Crystal"
                                 required
+                                onKeyDown={onKeyDown}
                             />
                         </div>
                         <div className="form-group col-md-6 mb-3">
@@ -51,21 +61,23 @@ export default function GemCreate() {
                                 id="energy" name="energy"
                                 placeholder="Energy"
                                 required
+                                onKeyDown={onKeyDown}
                             />
                         </div>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="category">Category</label>
-                        <select defaultValue={''} className="form-control mt-1" id="category" name="category" placeholder="Category" required>
+                        <select defaultValue={''} className="form-control mt-1" id="category" name="category" placeholder="Category" required onKeyDown={onKeyDown}>
                             <option value="" disabled>Choose a category</option>
                             <option value="raw-gems">Raw Gems</option>
                             <option value="tumbled-gems">Tumbled Gems</option>
                             <option value="shaped-gems">Shaped Gems</option>
+                            
                         </select>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="zodiac">Zodiac Sign</label>
-                        <select defaultValue={''}  className="form-control mt-1" id="zodiac" name="zodiac" placeholder="Zodiac">
+                        <select defaultValue={''}  className="form-control mt-1" id="zodiac" name="zodiac" placeholder="Zodiac" onKeyDown={onKeyDown}>
                             <option value="" disabled>Choose a zodiac sign</option> 
                             <option value="Aries">Aries</option>
                             <option value="Taurus">Taurus</option>
@@ -90,6 +102,7 @@ export default function GemCreate() {
                             name="specifics"
                             placeholder="Specifics"
                             required
+                            onKeyDown={onKeyDown}
                         />
                     </div>
                     <div className="mb-3">
@@ -101,6 +114,7 @@ export default function GemCreate() {
                             name="cleansing"
                             placeholder="Cleansing"
                             required
+                            onKeyDown={onKeyDown}
                         />
                     </div>
                     <div className="mb-3">
@@ -112,6 +126,7 @@ export default function GemCreate() {
                             name="imageUrl"
                             placeholder="Upload an image"
                             required
+                            onKeyDown={onKeyDown}
                         />
                     </div>
                     <div className="mb-3">
@@ -122,6 +137,7 @@ export default function GemCreate() {
                             placeholder="Summary"
                             rows="8"
                             required
+                            onKeyDown={onKeyDown}
                         ></textarea>
                     </div>
                     <div className="row">

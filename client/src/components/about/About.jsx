@@ -1,4 +1,8 @@
+import { useScrollTo } from '../../hooks/useScrollTo'
+
 export default function About() {
+    useScrollTo(0,0)
+
     return (
         <>
             <section className="bg-success py-5">

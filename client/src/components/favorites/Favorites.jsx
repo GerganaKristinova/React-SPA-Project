@@ -15,7 +15,7 @@ export default function Favorites() {
     }, [])
 
     const removeFromFavoritesHandler = (gemId, gemName) => {
-        const hasConfirmed = confirm(`Are you sure you want to delete ${gemName}`);
+        const hasConfirmed = confirm(`Are you sure you want to remove ${gemName} from favorites?`);
         if (hasConfirmed) {
             favoritesService.deleteFavorite(gemId)
         }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import * as gemService from '../../services/gemsService'
+import { useScrollTo } from '../../hooks/useScrollTo'
 
 export default function GemEdit() {
     const navigate = useNavigate()
@@ -48,6 +49,8 @@ export default function GemEdit() {
         }))
     }
 
+    useScrollTo(0,0)
+    
     return (
         <div className="container py-5">
             <div className="row py-5">

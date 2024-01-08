@@ -1,6 +1,9 @@
 import ContactsMap from "./ContactsMap";
+import { useScrollTo } from '../../hooks/useScrollTo'
 
 export default function Contacts() {
+    useScrollTo(0,0)
+    
     return (
         <>
             <div style={{backgroundColor: '#702963'}} className="container-fluid py-5">
